@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Jón og Marteinn Málningarþjónusta ehf.">
 
-    <title>Jón og Marteinn Málningarþ ehf.</title>
+    <title>Jón og Marteinn Málningarþjónusta</title>
     <link rel="icon" data-emoji="🏠" type="image/png"> <!-- See favicon script below -->
 
     <style type="text/css">
@@ -11,31 +11,44 @@
             font-size: 22px;
             font-family: 'Open Sans', sans-serif;
             background: linear-gradient(135deg, rgba(76, 107, 122, 0.50), rgba(76, 107, 122, 0.8), #4c6b7a);
+
+            margin: 0;
         }
-        h1, p {
+
+        h1, h2, p {
             color: #242424;
             text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
         }
+
         #container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            height: 80%;
             padding: 2em;
+        }
+
+        #logo {
+            width: 100%;
+
+            /* White, 20% transparent */
+            background: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
 
 <body>
 
+<img src="logo-4224.png" id="logo" alt="Logo">
 <div id="container">
-	<!-- <p><img src="logo.png" alt="Logo" wdith="1000"></p> -->
-    <h1>löggiltur málningarmeistari</h1>
-    <p>hafa samband: <A HREF="mailto:jonogmarteinn@jonogmarteinn.is">jonogmarteinn@jonogmarteinn.is</A></p>
-    <p>Jón Hafdal Sgurðarson - 7701532</p>
-    <p>Marteinn Hilmarsson - 8611242</p>
+    <h1>Löggiltur málarameistari.</h1>
+    <h2>Hafa samband: </h2>
+    <ul>
+        <li><a href="mailto:jonogmarteinn@jonogmarteinn.is?Subject=Fyrirspurn">jonogmarteinn@jonogmarteinn.is</a></li>
+        <li>Jón Hafdal Sigurðarson, <a href="tel:+3547701532">770 1532</a></li>
+        <li>Marteinn Hilmarsson, <a href="tel:+3548611242">861 1242</a></li>
+    </ul>
 </div>
 
 <!-- Emoji as favicon by Kristján Oddsson. https://koddsson.com/posts/emoji-favicon/ -->
