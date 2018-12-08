@@ -1,7 +1,8 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Jón og Marteinn Málningarþjónusta ehf.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jón og Marteinn Málningarþjónusta ehf. Löggiltur málarameistari. Jón Hafdal Sigurðarson: 770 1532, Marteinn Hilmarsson: 861 1242. jonogmarteinn@jonogmarteinn.is">
 
     <title>Jón og Marteinn Málningarþjónusta</title>
     <link rel="icon" data-emoji="🏠" type="image/png"> <!-- See favicon script below -->
@@ -20,6 +21,10 @@
             text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
         }
 
+        a {
+            color: #2b2b2b;
+        }
+
         #container {
             display: flex;
             flex-direction: column;
@@ -35,6 +40,10 @@
             /* White, 20% transparent */
             background: rgba(255, 255, 255, 0.2);
         }
+
+        #contacts {
+            line-height: 1.5em;
+        }
     </style>
 </head>
 
@@ -42,13 +51,13 @@
 
 <img src="logo-4224.png" id="logo" alt="Logo">
 <div id="container">
-    <h1>Löggiltur málarameistari.</h1>
-    <h2>Hafa samband: </h2>
-    <ul>
-        <li><a href="mailto:jonogmarteinn@jonogmarteinn.is?Subject=Fyrirspurn">jonogmarteinn@jonogmarteinn.is</a></li>
-        <li>Jón Hafdal Sigurðarson, <a href="tel:+3547701532">770 1532</a></li>
-        <li>Marteinn Hilmarsson, <a href="tel:+3548611242">861 1242</a></li>
-    </ul>
+    <h1>Löggiltur málarameistari</h1>
+
+    <p id="contacts">
+        <a href="mailto:jonogmarteinn@jonogmarteinn.is?Subject=Fyrirspurn">jonogmarteinn@jonogmarteinn.is</a><br />
+        Jón Hafdal Sigurðarson, <a href="tel:+3547701532">770 1532</a><br />
+        Marteinn Hilmarsson, <a href="tel:+3548611242">861 1242</a>
+    </p>
 </div>
 
 <!-- Emoji as favicon by Kristján Oddsson. https://koddsson.com/posts/emoji-favicon/ -->
