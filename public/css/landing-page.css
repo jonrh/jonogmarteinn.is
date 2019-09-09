@@ -23,6 +23,7 @@ header.masthead {
   background-color: #343a40;
   background: url("../img/splash-bg-1670x839.jpg") no-repeat center center;
   background-size: cover;
+  background-position: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -73,7 +74,7 @@ header.masthead h2 {
 
 .features-icons {
   padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-bottom: 3rem;
 }
 
 .features-icons .features-icons-item {
@@ -90,6 +91,10 @@ header.masthead h2 {
 
 .features-icons .features-icons-item:hover .features-icons-icon i {
   font-size: 5rem;
+}
+
+.jonogmarteinn-standing {
+  padding-bottom: 5rem;
 }
 
 .testimonials {
