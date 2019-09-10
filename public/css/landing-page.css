@@ -38,12 +38,18 @@ header.masthead .overlay {
   opacity: 0.5;
 }
 
-header.masthead h1 {
-  font-size: 2rem;
+header.masthead h2 {
+  font-size: 1.2rem;
 }
 
 header.masthead h2 {
   text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+
+@media (min-width: 576px) {
+  header.masthead h2 {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -51,7 +57,13 @@ header.masthead h2 {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
-  header.masthead h1 {
+  header.masthead h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  header.masthead h2 {
     font-size: 3rem;
   }
 }
