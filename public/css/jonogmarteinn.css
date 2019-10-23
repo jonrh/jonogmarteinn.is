@@ -9,3 +9,26 @@ a:hover {
 .red-theme {
     color: #cf1717;
 }
+
+.heading {
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/splash-bg-1670x839.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.heading .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.projects {
+    padding-top: 7rem;
+}
