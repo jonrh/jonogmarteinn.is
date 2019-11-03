@@ -35,7 +35,6 @@ a:hover {
 
 .carousel-item {
     height: 30rem;
-    min-height: 350px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
