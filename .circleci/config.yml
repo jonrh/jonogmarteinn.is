@@ -26,6 +26,15 @@ jobs:
             sudo ./aws/install
 
       - run:
+          name: Install Node dependencies with Yarn
+          # --frozen-lockfile: for reproducible installs in continuous deployment setups
+          command: yarn install --frozen-lockfile
+
+      - run:
+          name: Build GatsbyJS site, i.e. generate the public/ folder
+          command: yarn run build
+
+      - run:
           name: Generate robots.txt files for production and dev
           # Add a robots.txt file. Having a compliant robots.txt file aids search engine
           # optimization. When we are deploying to the master branch (production) we want to allow
