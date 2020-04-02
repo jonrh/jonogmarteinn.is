@@ -11,28 +11,20 @@ jobs:
       - checkout
 
       - run:
-          name: Install awscli, doesn't come by default with the node:10.16.3 image
-          # Python 2.7 comes by default with the Ubuntu container CircleCI uses.
-          # However it doesn't comes with python-dev which is required for installing pip. If not
-          # installed there will be an error when installing the package "wheel". The next two
-          # commands fetches the pip install script and installs pip. After installing pip we add
-          # pip to the path (so we can subsequently use the command "pip"). This is required
-          # because awscli has other dependencies which requires the existence of pip on the path.
-          # Finally we install awscli.
+          name: Install AWS command line interface to be able to deploy to S3 and CloudFront later
+          # Installs the AWS command line interface v2 so we can deploy our frontend assets to S3
+          # and invalidate the CloudFront cache in later steps. Another option to do this would be
+          # to use the circleci/aws-cli orb but at the time of writing it can only install AWS cli
+          # v1. There are no API differences but v1 requires Python and a bunch of other stuff
+          # whereas AWS cli v2 is a self contained binary (faster and simpler to set up).
           #
-          # It should be noted this is a hack to get awscli in a Node container. In CircleCI v1 the
-          # images came by default with awscli, so this mess wasn't required. In CircleCI v2.1
-          # there are now Orbs, for example the official aws-cli orb:
+          # https://circleci.com/docs/2.0/using-orbs/
           # https://circleci.com/orbs/registry/orb/circleci/aws-cli
-          # This would be the proper way to install and use aws-cli in CircleCI, but it requires
-          # enabling pipelines which comes with their own set of trade offs I haven't had the time
-          # yet to look into and try out.
+          # https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
           command: |
-              sudo apt-get install python-dev
-              curl -O https://bootstrap.pypa.io/get-pip.py
-              python get-pip.py --user
-              export PATH=~/.local/bin:$PATH
-              pip install awscli --upgrade --user
+            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip awscliv2.zip
+            sudo ./aws/install
 
       - run:
           name: Generate robots.txt files for production and dev
@@ -61,6 +53,12 @@ jobs:
           # corresponding S3 bucket. Files that don't exist in the public/ folder are deleted in
           # the S3 bucket.
           #
+          # The environment variable AWS_PAGER defined before the CloudFront commands is a
+          # temporary fix for a bug in AWS cli v2. At the time of writing AWS cli v2 requires a
+          # pager program, by default the command `less`. And lucky for us `less` is not available
+          # in the CircleCI containers we run in. The good news is we can configure AWS cli to not
+          # use any pager (the empty string "") and instead just print the entire output of results
+          # out. For this case it's completely fine. See: https://github.com/aws/aws-cli/issues/5038
           #
           # Environment variables defined in the CircleCI project:
           #   + $CLOUDFRONT_ID: jonogmarteinn.is AWS CloudFront distribution ID for production
@@ -68,12 +66,12 @@ jobs:
           command: |
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
                   echo "On the master branch. Deploying to production: jonogmarteinn.is"
-                  ~/.local/bin/aws s3 sync public/ s3://jonogmarteinn.is/ --delete
-                  ~/.local/bin/aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths '/*'
+                  aws s3 sync public/ s3://jonogmarteinn.is/ --delete
+                  AWS_PAGER="" aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths '/*'
               elif [ "${CIRCLE_BRANCH}" == "dev" ]; then
                   echo "On the dev branch. Deploying to dev: dev.jonogmarteinn.is"
-                  ~/.local/bin/aws s3 sync public/ s3://dev.jonogmarteinn.is/ --delete
-                  ~/.local/bin/aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DEV_ID --paths '/*'
+                  aws s3 sync public/ s3://dev.jonogmarteinn.is/ --delete
+                  AWS_PAGER="" aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DEV_ID --paths '/*'
               else
                   echo "Not master or dev branch so not deploying anything"
               fi
