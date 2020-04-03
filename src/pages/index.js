@@ -430,7 +430,10 @@ const Index = (props) => {
             <div className="col-lg-6 h-100 text-center text-lg-right my-auto">
               <ul className="list-inline mb-0">
                 <li className="list-inline-item">
-                  <a href="https://www.instagram.com/jon_og_marteinn_/">
+                  <a
+                    href="https://www.instagram.com/jon_og_marteinn_/"
+                    aria-label="Jón & Marteinn á Instagram"
+                  >
                     <i className="fab fa-instagram fa-2x fa-fw" />
                   </a>
                 </li>
