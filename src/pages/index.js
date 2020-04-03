@@ -415,18 +415,17 @@ const Index = (props) => {
         </div>
       </section>
 
+      {/* LightWidget, displays Instagram photos. Account & settings: lightwidget.com */}
       <section>
-        {/*
-        <!-- LightWidget WIDGET -->
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js" />
         <iframe
+          title="Instagram myndir Jóns og Marteins"
           src="https://cdn.lightwidget.com/widgets/48b025719c3153beaa207400d3a5f49d.html"
           scrolling="no"
           allowtransparency="true"
           className="lightwidget-widget"
-          style="width:100%;border:0;overflow:hidden;"
-        ></iframe>
-        */}
+          style={{ width: "100%", border: 0, overflow: "hidden" }}
+        />
       </section>
 
       {/* Footer */}
