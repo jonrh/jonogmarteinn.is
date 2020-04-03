@@ -1,7 +1,7 @@
 {
   "name": "jonogmarteinn.is",
   "version": "1.0.0",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Jón Rúnar Helgson",
   "description": "Source for the jonogmarteinn.is website",
   "main": "public/index.html",
@@ -11,8 +11,17 @@
     "url": "git+https://github.com/jonrh/jonogmarteinn.is.git"
   },
   "dependencies": {
-    "startbootstrap-landing-page": "^5.0.6"
+    "startbootstrap-landing-page": "5.0.6",
+    "gatsby": "2.19.50",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {},
-  "scripts": {}
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "yarn run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
 }
