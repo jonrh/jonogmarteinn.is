@@ -119,7 +119,6 @@ const Index = (props) => {
         </div>
       </section>
 
-
       {/* Þjónustur & Verkefni */}
       <section className="showcase">
         <div className="container-fluid p-0">
@@ -347,19 +346,6 @@ const Index = (props) => {
               </p>
             </div>
           </div>
-
-          {/*
-           Önnur verkefni:
-
-            Þjónustumiðstöð í Vík.
-
-            Íbúðarhúsnæði:
-            3 hús, öll hús, í Garðabæ.
-
-            Fjölbýlishúsið:
-            Vefarastræti, sandsparsls. Mála að utan.
-            32 íbúðir
-          */}
         </div>
       </section>
 
@@ -448,24 +434,6 @@ const Index = (props) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 h-100 text-center text-lg-left my-auto">
-
-              {/*
-              <ul className="list-inline mb-2">
-                <li className="list-inline-item">
-                  <a href="#">Um Fyrirtækið</a>
-                </li>
-                <li className="list-inline-item">&sdot;</li>
-                <li className="list-inline-item">
-                  <a href="#">Hafa Samband</a>
-                </li>
-                <li className="list-inline-item">&sdot;</li>
-                <li className="list-inline-item">
-                  <a href="#">Verkefni</a>
-                </li>
-              </ul>
-
-              */}
-
               <p className="mb-4 mb-lg-0">
                 &copy; Jón og Marteinn Málningarþjónusta ehf. 2019 <br />
                 Kennitala: <a href="https://www.rsk.is/fyrirtaekjaskra/leit/kennitala/6901181570">
@@ -474,13 +442,6 @@ const Index = (props) => {
             </div>
             <div className="col-lg-6 h-100 text-center text-lg-right my-auto">
               <ul className="list-inline mb-0">
-                {/*
-                <li className="list-inline-item mr-3">
-                  <a href="#">
-                    <i className="fab fa-facebook fa-2x fa-fw"></i>
-                  </a>
-                </li>
-                */}
                 <li className="list-inline-item">
                   <a href="https://www.instagram.com/jon_og_marteinn_/">
                     <i className="fab fa-instagram fa-2x fa-fw" />
@@ -491,8 +452,6 @@ const Index = (props) => {
           </div>
         </div>
       </footer>
-
-
     </>
   );
 };
