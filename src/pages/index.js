@@ -1,6 +1,9 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./../vendor/fontawesome-free/css/all.min.css";
+import "./../vendor/simple-line-icons/css/simple-line-icons.css";
 import "./landing-page.css";
 import "./jonogmarteinn.css";
 
@@ -33,32 +36,17 @@ const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
 const Index = (props) => {
   return (
     <>
-      {/*
-        This is the beginning of the original index.html file. Some things have been removed and
-        implemented through React (such as adding styles). What remains here is sort of a list of
-        things yet to be done and making sure that the final build export contains this content.
+      <Helmet>
+        <html lang="is" />
+        <meta name="description" content="Jón og Marteinn Málningarþjónusta ehf. Löggiltur málarameistari. Jón Hafdal Sigurðarson: 770 1532, Marteinn Hilmarsson: 861 1242. jonogmarteinn@jonogmarteinn.is" />
+        <meta name="author" content="Jón Rúnar Helgason, jonrh.is" />
 
-        I have removed the emoji favicon by Kristján Oddson since I plan on implementing a favicon
-        derived from the logo and a static image.
+        <title>Jón og Marteinn Málningarþjónusta</title>
 
-        <!DOCTYPE html>
-        <html lang="en">
-        <!-- Website author: Jón Rúnar Helgason, jonrh.is -->
-        <!-- Theme: Landing Page by Start Bootstrap, https://startbootstrap.com/themes/landing-page/ -->
-        <head>
-          <meta charSet="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="description" content="Jón og Marteinn Málningarþjónusta ehf. Löggiltur málarameistari. Jón Hafdal Sigurðarson: 770 1532, Marteinn Hilmarsson: 861 1242. jonogmarteinn@jonogmarteinn.is">
-          <meta name="author" content="Jón Rúnar Helgason, jonrh.is">
+        {/* Custom fonts for the theme */}
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+      </Helmet>
 
-          <title>Jón og Marteinn Málningarþjónusta</title>
-
-          <!-- Custom fonts for this template -->
-          <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-          <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-          <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-        </head>
-      */}
 
       {/* Masthead */}
       <header className="masthead text-white text-center">
