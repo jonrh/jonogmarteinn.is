@@ -873,6 +873,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@fortawesome/fontawesome-free@5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.13.0.tgz#fcb113d1aca4b471b709e8c9c168674fbd6e06d9"
+  integrity sha512-xKOeQEl5O47GPZYIMToj6uuA2syyFlq9EMSl2ui0uytjY9xbe8XS0pexNWmxrdcCyNGyDmLyYw5FtKsalBUeOg==
+
 "@fortawesome/fontawesome-free@5.9.0":
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.9.0.tgz#1aa5c59efb1b8c6eb6277d1e3e8c8f31998b8c8e"
@@ -9086,7 +9091,7 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-simple-line-icons@^2.4.1:
+simple-line-icons@2.4.1, simple-line-icons@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/simple-line-icons/-/simple-line-icons-2.4.1.tgz#b75bc5a0d87e530928c2ccda5735274bb256f234"
   integrity sha1-t1vFoNh+UwkowszaVzUnS7JW8jQ=

@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./../vendor/fontawesome-free/css/all.min.css";
-import "./../vendor/simple-line-icons/css/simple-line-icons.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "simple-line-icons/css/simple-line-icons.css";
 import "./landing-page.css";
 import "./jonogmarteinn.css";
 

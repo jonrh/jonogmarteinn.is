@@ -11,12 +11,14 @@
     "url": "git+https://github.com/jonrh/jonogmarteinn.is.git"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.13.0",
     "bootstrap": "4.4.1",
     "gatsby": "2.19.50",
     "react": "16.13.1",
     "react-bootstrap": "1.0.0",
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
+    "simple-line-icons": "2.4.1",
     "startbootstrap-landing-page": "5.0.6"
   },
   "devDependencies": {},
