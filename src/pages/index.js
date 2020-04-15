@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import "typeface-lato"; // Main font used by Bootstrap theme
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "simple-line-icons/css/simple-line-icons.css";
@@ -42,9 +43,6 @@ const Index = (props) => {
         <meta name="author" content="Jón Rúnar Helgason, jonrh.is" />
 
         <title>Jón og Marteinn Málningarþjónusta</title>
-
-        {/* Custom fonts for the theme */}
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
       </Helmet>
 
 
