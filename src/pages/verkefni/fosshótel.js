@@ -18,6 +18,17 @@ const Fosshótel = (props) => {
     <Layout>
       <h1>Fosshótel á Hnappavöllum</h1>
       <p>Endurmálun á ytra tréverki sem og innanhús á hótelinu.</p>
+
+      <Row>
+        <Col>
+          <FullWidthImage src={Fosshotel3} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <FullWidthImage src={Fosshotel6} />
+        </Col>
+      </Row>
       <Row>
         <Col xs={6}>
           <FullWidthImage src={Fosshotel5} />
@@ -33,19 +44,10 @@ const Fosshótel = (props) => {
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Fosshotel3} />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
           <FullWidthImage src={Fosshotel4} />
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <FullWidthImage src={Fosshotel6} />
-        </Col>
-      </Row>
+
     </Layout>
   );
 };
