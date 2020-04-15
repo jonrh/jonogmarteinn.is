@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
+import s from "./Header.module.css";
 import simplifiedLogo from "../images/logo/simplified logo v1.svg";
 
 const Header = (props) => {
@@ -10,10 +11,16 @@ const Header = (props) => {
     <header className="py-5">
       <Row className="align-items-center">
         <Col md={6} sm={12} className="mb-4 mb-md-0">
-          <Row className="align-items-center">
-            <Col lg={2} md={3} xs={2}><Image src={simplifiedLogo} /></Col>
-            <Col lg={10} md={9} xs={10}><h3 className="mb-0">Jón & Marteinn</h3></Col>
-          </Row>
+          <a href="/" aria-label="Forsíða" className={s.header}>
+            <Row className="align-items-center">
+              <Col lg={2} md={3} xs={2}>
+                <Image src={simplifiedLogo} />
+              </Col>
+              <Col lg={10} md={9} xs={10}>
+                <h3 className="mb-0">Jón & Marteinn</h3>
+              </Col>
+            </Row>
+          </a>
         </Col>
         <Col md={6} sm={12} className="mb-0 mb-lg-0">
           <ul className="list-inline text-md-right mb-0">
