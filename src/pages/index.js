@@ -29,6 +29,7 @@ import Blikahofdi1 from "./../images/blikahofdi1.jpg";
 import Vegghamrar1 from "./../images/vegghamrar2-10/vegghamrar1.jpg";
 import Profile1_Jon from "./../images/profile1_jon.jpg";
 import Profile2_Marteinn from "./../images/profile2_marteinn.jpg";
+import Header from "../components/Header";
 
 /** Convenience function to return a React style object with a background image */
 const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
@@ -44,6 +45,10 @@ const Index = (props) => {
         <title>Jón og Marteinn Málningarþjónusta</title>
       </Helmet>
 
+      {/* Header navigation */}
+      <div className="container">
+        <Header />
+      </div>
 
       {/* Masthead */}
       <header className="masthead text-white text-center">
