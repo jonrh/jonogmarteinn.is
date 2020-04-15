@@ -33,14 +33,14 @@ const Footer = (props) => {
               Kennitala: <a href={RSK_URL}>690118-1570</a>, Gauksrimi 34, 800 Selfoss
             </p>
           </div>
-          <div className="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <div className="col-lg-6 h-100 text-center text-lg-right align-items-start">
             <ul className="list-inline mb-0">
               <li className="list-inline-item">
                 <a
                   href="https://www.instagram.com/jon_og_marteinn_/"
                   aria-label="Jón & Marteinn á Instagram"
                 >
-                  <i className="fab fa-instagram fa-2x fa-fw" />
+                  Við á Instagram
                 </a>
               </li>
             </ul>

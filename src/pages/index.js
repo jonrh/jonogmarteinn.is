@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 
 import "typeface-lato"; // Main font used by Bootstrap theme
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "simple-line-icons/css/simple-line-icons.css";
 import "./../styles/landing-page.css";
 import "./../styles/jonogmarteinn.css";
@@ -432,7 +431,7 @@ const Index = (props) => {
                     href="https://www.instagram.com/jon_og_marteinn_/"
                     aria-label="Jón & Marteinn á Instagram"
                   >
-                    <i className="fab fa-instagram fa-2x fa-fw" />
+                    Við á Instagram
                   </a>
                 </li>
               </ul>

@@ -6,7 +6,6 @@ import Footer from "./Footer";
 
 import "typeface-lato"; // Main font used by Bootstrap theme
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "simple-line-icons/css/simple-line-icons.css";
 import "./../styles/landing-page.css";
 import "./../styles/jonogmarteinn.css";
