@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "simple-line-icons/css/simple-line-icons.css";
-import "./landing-page.css";
-import "./jonogmarteinn.css";
+import "./../styles/landing-page.css";
+import "./../styles/jonogmarteinn.css";
 
 import LogoWhiteText4224 from "./../images/logo-whitetext-4224.png";
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
