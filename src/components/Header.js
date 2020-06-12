@@ -9,21 +9,29 @@ import simplifiedLogo from "../images/logo/simplified logo v1.svg";
 const Header = (props) => {
   return (
     <header className="py-5">
-      <Row className="align-items-center">
-        <Col md={6} sm={12} className="mb-4 mb-md-0">
+      {/* Logo and heading */}
+      <Row className="justify-content-center">
+        <Col xl={1} lg={2} md={2} xs={3}>
           <a href="/" aria-label="Forsíða" className={s.header}>
-            <Row className="align-items-center">
-              <Col lg={2} md={3} xs={2}>
-                <Image src={simplifiedLogo} />
-              </Col>
-              <Col lg={10} md={9} xs={10}>
-                <h3 className="mb-0">Jón & Marteinn</h3>
-              </Col>
-            </Row>
+            <Image src={simplifiedLogo} />
           </a>
         </Col>
-        <Col md={6} sm={12} className="mb-0 mb-lg-0">
-          <ul className="list-inline text-md-right mb-0">
+      </Row>
+      <Row className="mt-3">
+        <Col className="text-center">
+          <h2 className="mb-0">Jón & Marteinn</h2>
+          <h3 className="mt-2">alhliða málningarþjónusta</h3>
+        </Col>
+      </Row>
+
+      {/* Navigation links */}
+      <Row>
+        <Col className="mt-3 mb-0 mb-lg-0 text-center">
+          <ul className={`list-inline mb-0 ${s.headerLinks}`}>
+            <li className="list-inline-item">
+              <a href="/">Forsíða</a>
+            </li>
+            <li className="list-inline-item">&sdot;</li>
             <li className="list-inline-item">
               <a href="/þjónustur">Þjónustur</a>
             </li>
