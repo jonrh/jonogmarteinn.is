@@ -31,6 +31,8 @@ import Layout from "../components/Layout";
 /** Convenience function to return a React style object with a background image */
 const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
 
+const H3Link = ({label, href}) => <a href={href}><h3>{label}</h3></a>;
+
 const Index = (props) => {
   return (
     <Layout isFrontPage={true}>
@@ -98,7 +100,7 @@ const Index = (props) => {
               role="img" aria-label="Hvítt íbúðarhúsnæði með gráblátt þak"
             />
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h3>Íbúðarhúsnæði</h3>
+              <H3Link label="Íbúðarhúsnæði" href="/þjónustur/íbúðarhúsnæði" />
               <p className="lead mb-0">
                 Einstaklingar, þakmálun, útimálun, innimálun. Litaráðgjöf. Fáðu fagmenn okkar í verkið.
               </p>
@@ -112,7 +114,7 @@ const Index = (props) => {
               role="img" aria-label="Nýmálað hvítt fjölbýlishús"
             />
             <div className="col-lg-6 my-auto showcase-text">
-              <h3>Fjölbýlishús</h3>
+              <H3Link label="Fjölbýlishús" href="/þjónustur/fjölbýlishús" />
               <p className="lead mb-0">
                 Búum yfir mikilli reynslu við að þjónusta fasteignafélög og húsfélög. Hvort sem um er
                 að ræða nýbyggingu eða viðhaldsvinnu.
@@ -127,7 +129,7 @@ const Index = (props) => {
               role="img" aria-label="Hvítt atvinnuhúsnæði"
             />
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h3>Atvinnuhúsnæði</h3>
+              <H3Link label="Atvinnuhúsnæði" href="/þjónustur/atvinnuhúsnæði" />
               <p className="lead mb-0">
                 Stofnanir og fyrirtæki af öllum stærðum og gerðum.
               </p>
@@ -141,7 +143,7 @@ const Index = (props) => {
               role="img" aria-label="Appelsínugult handriði í stigagangi með grábláum vegg"
             />
             <div className="col-lg-6 my-auto showcase-text">
-              <h3>Sérverkefni</h3>
+              <H3Link label="Sérverkefni" href="/þjónustur/sérverkefni" />
               <p className="lead mb-0">
                 Tökum að okkur hverskonar smærri sérverkefni. Ef það er kominn tími á að gefa pallinum
                 og skjólveggnum ást og alúð þá reddum við þér fljótt og örugglega.
@@ -193,7 +195,7 @@ const Index = (props) => {
               </div>
             </div>
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h3>Fosshótel</h3>
+              <H3Link label="Fosshótel" href="/verkefni/fosshótel" />
               <p className="lead mb-0">
                 Verkefni í vinnslu fyrir Fosshótel á Hnappavöllum við Jökulsárlón. Endurmálun á ytra
                 tréverki sem og innanhús á hótelinu.
@@ -209,7 +211,7 @@ const Index = (props) => {
               role="img" aria-label="Jón Hafdal að kítta við andyri Lindex verslunar í Kaupmannahöfn"
             />
             <div className="col-lg-6 my-auto showcase-text">
-              <h3>Lindex</h3>
+              <H3Link label="Lindex" href="/verkefni/lindex" />
               <p className="lead mb-0">
                 Höfum séð alfarið um málningarþjónustu fyrir Lindex á Íslandi frá því að fyrsta verslun
                 opnaði árið 2011. Höfum einnig tekið að okkur verkefni í Kaupmannahöfn.
@@ -269,7 +271,7 @@ const Index = (props) => {
               </div>
             </div>
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h3>Sólvangur Hjúkrunarheimili</h3>
+              <H3Link label="Sólvangur Hjúkrunarheimili" href="/verkefni/sólvangur" />
               <p className="lead mb-0">
                 Höfum nýlokið við alla sparsl og málningarvinnu í glæsilegu hjúkrunarheimili Sólvangs í
                 Hafnarfirði.
@@ -285,7 +287,7 @@ const Index = (props) => {
               role="img" aria-label="Dökk og ljósgræn málað fjölbýlishús á þremur hæðum"
             />
             <div className="col-lg-6 my-auto showcase-text">
-              <h3>Blikahöfði 5 - 7</h3>
+              <H3Link label="Blikahöfði 5 - 7" href="/verkefni/blikahöfði5-7" />
               <p className="lead mb-0">
                 Endurmálun fyrir húsfélag Blikhöfða 5 - 7. Útimálun á veggjum og tréverki.
               </p>
@@ -300,7 +302,7 @@ const Index = (props) => {
               role="img" aria-label="Ljós-ljós brúnt málað fjölbýlishús á tvemur hæðum"
             />
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h3>Vegghamrar 2 - 10</h3>
+              <H3Link label="Vegghamrar 2 - 10" href="verkefni/vegghamrar2-10" />
               <p className="lead mb-0">
                 Viðhald fyrir húsfélag Vegghamra 2 - 10. Útimálun á öllum veggjum og tréverki.
               </p>

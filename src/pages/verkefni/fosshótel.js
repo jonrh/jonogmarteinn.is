@@ -47,7 +47,6 @@ const Fosshótel = (props) => {
           <FullWidthImage src={Fosshotel4} />
         </Col>
       </Row>
-
     </Layout>
   );
 };
