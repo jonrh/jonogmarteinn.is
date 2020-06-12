@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import "typeface-lato"; // Main font used by Bootstrap theme
 import "bootstrap/dist/css/bootstrap.min.css";
 import "simple-line-icons/css/simple-line-icons.css";
 import "./../styles/landing-page.css";
