@@ -5,32 +5,23 @@ import "simple-line-icons/css/simple-line-icons.css";
 import "./../styles/landing-page.css";
 import "./../styles/jonogmarteinn.css";
 
+import Layout from "../components/Layout";
+
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
 import Ibudarhus1_920x912 from "./../images/ibudarhus1-920x912.jpg";
 import Fjolbylishus1 from "./../images/fjolbylishus1.jpg";
 import Atvinnu1 from "./../images/atvinnu1.jpg";
 import Serverkefni1_804x820 from "./../images/serverkefni1-804x820.jpg";
 import Fosshotel3 from "./../images/fosshotel/fosshotel3.jpg";
-import Fosshotel4 from "./../images/fosshotel/fosshotel4.jpg";
-import Fosshotel5 from "./../images/fosshotel/fosshotel5.jpg";
-import Fosshotel6 from "./../images/fosshotel/fosshotel6.jpg";
 import Lindex from "./../images/lindex.jpg";
 import Solvangur1 from "./../images/solvangur/solvangur1.jpg";
-import Solvangur2 from "./../images/solvangur/solvangur2.jpg";
-import Solvangur3 from "./../images/solvangur/solvangur3.jpg";
-import Solvangur4 from "./../images/solvangur/solvangur4.jpg";
-import Solvangur5 from "./../images/solvangur/solvangur5.jpg";
-import Solvangur6 from "./../images/solvangur/solvangur6.jpg";
-import Solvangur7 from "./../images/solvangur/solvangur7.jpg";
 import Blikahofdi1 from "./../images/blikahofdi1.jpg";
 import Vegghamrar1 from "./../images/vegghamrar2-10/vegghamrar1.jpg";
 import Profile1_Jon from "./../images/profile1_jon.jpg";
 import Profile2_Marteinn from "./../images/profile2_marteinn.jpg";
-import Layout from "../components/Layout";
 
 /** Convenience function to return a React style object with a background image */
 const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
-
 const H3Link = ({label, href}) => <a href={href}><h3>{label}</h3></a>;
 
 const Index = (props) => {
@@ -160,40 +151,11 @@ const Index = (props) => {
 
           {/* Fosshótel */}
           <div className="row no-gutters">
-            <div className="col-lg-6 order-lg-2 text-white">
-              <div id="carouselFosshotel" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner" role="listbox">
-                  <div
-                    className="carousel-item active"
-                    style={ backgroundImage(Fosshotel3) }
-                    role="img" aria-label="Mynd tekin fyrir framan Fosshótel á Hnappavöllum"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Fosshotel6) }
-                    role="img" aria-label="Svart ytra tréverk hótelsins með lyftukörfu fyrir framan"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Fosshotel5) }
-                    role="img" aria-label="Ytri hlið hótelsins sem sýnir svart tréverk"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Fosshotel4) }
-                    role="img" aria-label="Starfsmaður að mála loftið inni á hótelinu"
-                  />
-                </div>
-                <a className="carousel-control-prev" href="#carouselFosshotel" role="button" data-slide="prev">
-                  <span className="carousel-control-prev-icon" aria-hidden="true" />
-                  <span className="sr-only">Fyrri</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselFosshotel" role="button" data-slide="next">
-                  <span className="carousel-control-next-icon" aria-hidden="true" />
-                  <span className="sr-only">Næsta</span>
-                </a>
-              </div>
-            </div>
+            <div
+              className="col-lg-6 order-lg-2 text-white showcase-img"
+              style={ backgroundImage(Fosshotel3) }
+              role="img" aria-label="Mynd tekin fyrir framan Fosshótel á Hnappavöllum"
+            />
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
               <H3Link label="Fosshótel" href="/verkefni/fosshótel" />
               <p className="lead mb-0">
@@ -221,55 +183,11 @@ const Index = (props) => {
 
           {/* Sólvangur Hjúkrunarheimili */}
           <div className="row no-gutters">
-            <div className="col-lg-6 order-lg-2 text-white">
-              <div id="carouselSolvangur" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner" role="listbox">
-                  <div
-                    className="carousel-item active"
-                    style={ backgroundImage(Solvangur1) }
-                    role="img" aria-label="Sameiginlegt rými með hvítum veggjum"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Solvangur2) }
-                    role="img" aria-label="Nýmálað hvítt hervergi vistmanns"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Solvangur3) }
-                    role="img" aria-label="Nýmálaður blár veggur"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Solvangur4) }
-                    role="img" aria-label="Nýmálður djúpsjávar grænn veggur"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Solvangur5) }
-                    role="img" aria-label="Nýmálaður brúnn veggur"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Solvangur6) }
-                    role="img" aria-label="Starfsmaður málar í kringum ljósrofa"
-                  />
-                  <div
-                    className="carousel-item"
-                    style={ backgroundImage(Solvangur7) }
-                    role="img" aria-label="Starfsmaður málar bakvið handrið á gangi"
-                  />
-                </div>
-                <a className="carousel-control-prev" href="#carouselSolvangur" role="button" data-slide="prev">
-                  <span className="carousel-control-prev-icon" aria-hidden="true" />
-                  <span className="sr-only">Fyrri</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselSolvangur" role="button" data-slide="next">
-                  <span className="carousel-control-next-icon" aria-hidden="true" />
-                  <span className="sr-only">Næsta</span>
-                </a>
-              </div>
-            </div>
+            <div
+              className="col-lg-6 order-lg-2 text-white showcase-img"
+              style={ backgroundImage(Solvangur1) }
+              role="img" aria-label="Sameiginlegt rými með hvítum veggjum"
+            />
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
               <H3Link label="Sólvangur Hjúkrunarheimili" href="/verkefni/sólvangur" />
               <p className="lead mb-0">
