@@ -1,10 +1,9 @@
 import React from "react";
-import moment from "moment";
 
 const RSK_URL = "https://www.rsk.is/fyrirtaekjaskra/leit/kennitala/6901181570";
 
 const getCopyrightString = () => {
-  const currentYear = moment().format(`YYYY`);
+  const currentYear = new Date().getFullYear();
   return `Jón og Marteinn Málningarþjónusta ehf. ©  ${currentYear}`;
 };
 
