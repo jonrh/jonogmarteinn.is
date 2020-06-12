@@ -30,7 +30,11 @@ const Fyrirtækið = () => {
           <div className="row justify-content-center">
             <div className="col-lg-4">
               <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img className="img-fluid rounded-circle mb-3" src={Profile1_Jon} alt="Portrait of Jón Hafdal" />
+                <img
+                  className="img-fluid rounded-circle mb-3"
+                  src={Profile1_Jon}
+                  alt="Portrait of Jón Hafdal"
+                />
                 <h5>Jón Hafdal Sigurðarson</h5>
                 <p className="font-weight-bold mb-0 h3">
                   <a href="tel:+3547701532">
@@ -42,7 +46,11 @@ const Fyrirtækið = () => {
             </div>
             <div className="col-lg-4">
               <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img className="img-fluid rounded-circle mb-3" src={Profile2_Marteinn} alt="Portrait of Marteinn" />
+                <img
+                  className="img-fluid rounded-circle mb-3"
+                  src={Profile2_Marteinn}
+                  alt="Portrait of Marteinn"
+                />
                 <h5>Marteinn Hilmarsson</h5>
                 <p className="font-weight-bold mb-0 h3">
                   <a href="tel:+3548611242">
