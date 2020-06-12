@@ -13,7 +13,7 @@ const Header = (props) => {
       <Row className="justify-content-center">
         <Col xl={1} lg={2} md={2} xs={3}>
           <a href="/" aria-label="Forsíða" className={s.header}>
-            <Image src={simplifiedLogo} />
+            <Image src={simplifiedLogo} alt="Jón & Marteinn logo, red house facade with windows" />
           </a>
         </Col>
       </Row>

@@ -6,7 +6,6 @@ import "simple-line-icons/css/simple-line-icons.css";
 import "./../styles/landing-page.css";
 import "./../styles/jonogmarteinn.css";
 
-import LogoWhiteText4224 from "./../images/logo-whitetext-4224.png";
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
 import Ibudarhus1_920x912 from "./../images/ibudarhus1-920x912.jpg";
 import Fjolbylishus1 from "./../images/fjolbylishus1.jpg";
@@ -49,18 +48,19 @@ const Index = (props) => {
         <Header />
       </div>
 
-      {/* Masthead */}
-      <header className="masthead text-white text-center">
-        <div className="overlay" />
+      <section className="jonogmarteinn-standing">
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <img src={LogoWhiteText4224} alt="Jón og Marteinn logo" className="img-fluid" />
-              <h2>alhliða málningarþjónusta</h2>
+            <div className="col-12 text-center">
+              <img
+                className="img-fluid"
+                src={JonAndMarteinnStanding}
+                alt="Jón og Marteinn standandi hlið við hlið"
+              />
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* 3x Icon Grid */}
       <section className="features-icons bg-white text-center">
@@ -94,28 +94,13 @@ const Index = (props) => {
         </div>
       </section>
 
-      <section className="jonogmarteinn-standing">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <img
-                className="img-fluid"
-                src={JonAndMarteinnStanding}
-                alt="Jón og Marteinn standandi hlið við hlið"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Þjónustur & Verkefni */}
       <section className="showcase">
         <div className="container-fluid p-0">
           {/* Þjónustur heading */}
           <div className="row heading no-gutters">
-            <div className="overlay" />
             <div className="col text-center">
-              <h2 className="text-white">Þjónustur</h2>
+              <h2>Þjónustur</h2>
             </div>
           </div>
 
@@ -179,9 +164,8 @@ const Index = (props) => {
 
           {/* Verkefni heading */}
           <div className="row heading no-gutters">
-            <div className="overlay" />
             <div className="col text-center">
-              <h2 className="text-white">Verkefni</h2>
+              <h2>Verkefni</h2>
             </div>
           </div>
 
