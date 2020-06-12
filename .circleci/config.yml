@@ -34,7 +34,7 @@ workflows:
 jobs:
   BuildDeploy:
     docker:
-      - image: cimg/node:12.16
+      - image: circleci/node:12.18
 
     parameters:
       # The URL of the AWS S3 bucket to deploy static assets to, example: "s3://jonogmarteinn.is/".
@@ -54,21 +54,31 @@ jobs:
     steps:
       - checkout
 
+#      - run:
+#          name: Install AWS command line interface to be able to deploy to S3 and CloudFront later
+#          # Installs the AWS command line interface v2 so we can deploy our frontend assets to S3
+#          # and invalidate the CloudFront cache in later steps. Another option to do this would be
+#          # to use the circleci/aws-cli orb but at the time of writing it can only install AWS cli
+#          # v1. There are no API differences but v1 requires Python and a bunch of other stuff
+#          # whereas AWS cli v2 is a self contained binary (faster and simpler to set up).
+#          #
+#          # https://circleci.com/docs/2.0/using-orbs/
+#          # https://circleci.com/orbs/registry/orb/circleci/aws-cli
+#          # https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+#          command: |
+#            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+#            unzip awscliv2.zip
+#            sudo ./aws/install
+#            aws --version
+
       - run:
-          name: Install AWS command line interface to be able to deploy to S3 and CloudFront later
-          # Installs the AWS command line interface v2 so we can deploy our frontend assets to S3
-          # and invalidate the CloudFront cache in later steps. Another option to do this would be
-          # to use the circleci/aws-cli orb but at the time of writing it can only install AWS cli
-          # v1. There are no API differences but v1 requires Python and a bunch of other stuff
-          # whereas AWS cli v2 is a self contained binary (faster and simpler to set up).
-          #
-          # https://circleci.com/docs/2.0/using-orbs/
-          # https://circleci.com/orbs/registry/orb/circleci/aws-cli
-          # https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+          name: Install AWS command line interface v1
           command: |
-            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-            unzip awscliv2.zip
-            sudo ./aws/install
+            sudo apt-get install python-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python get-pip.py --user
+            export PATH=~/.local/bin:$PATH
+            pip install awscli --upgrade --user
             aws --version
 
       - run:
@@ -103,6 +113,32 @@ jobs:
           #   + $CLOUDFRONT_ID: jonogmarteinn.is AWS CloudFront distribution ID for production
           #   + $CLOUDFRONT_DEV_ID: dev.jonogmarteinn.is AWS CloudFront distribution ID for dev
           command: aws s3 sync public/ <<parameters.s3Bucket>> --delete
+
+      - deploy:
+          name: Apply Cache-Control HTTP header to static assets that don't change
+          command: |
+            aws s3 cp <<parameters.s3Bucket>> <<parameters.s3Bucket>> \
+              --recursive --exclude "*" \
+              --include "static/*" \
+              --include "*.css" \
+              --include "*.js" \
+              --metadata-directive REPLACE --cache-control "public, max-age=31536000, s-maxage=31536000, immutable"
+
+            # Uncomment if gatsby-plugin-offline is used. Avoids caching the service worker file.
+            #--exclude "sw.js"
+
+      - deploy:
+          name: Apply Cache-Control HTTP header to files that should not be cached
+          command: |
+            aws s3 cp <<parameters.s3Bucket>> <<parameters.s3Bucket>> \
+              --recursive --exclude "*" \
+              --include "*.html" \
+              --include "page-data/*.json" \
+              --include "app-data.json" \
+              --metadata-directive REPLACE --cache-control "public, no-cache, s-maxage=31536000"
+
+            # Uncomment if gatsby-plugin-offline is used. Avoids caching the service worker file.
+            #--include "sw.js"
 
       - deploy:
           name: Invalidate the CloudFront cache
