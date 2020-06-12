@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "simple-line-icons/css/simple-line-icons.css";
@@ -27,27 +26,15 @@ import Blikahofdi1 from "./../images/blikahofdi1.jpg";
 import Vegghamrar1 from "./../images/vegghamrar2-10/vegghamrar1.jpg";
 import Profile1_Jon from "./../images/profile1_jon.jpg";
 import Profile2_Marteinn from "./../images/profile2_marteinn.jpg";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 
 /** Convenience function to return a React style object with a background image */
 const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
 
 const Index = (props) => {
   return (
-    <>
-      <Helmet>
-        <html lang="is" />
-        <meta name="description" content="Jón og Marteinn Málningarþjónusta ehf. Löggiltur málarameistari. Jón Hafdal Sigurðarson: 770 1532, Marteinn Hilmarsson: 861 1242. jonogmarteinn@jonogmarteinn.is" />
-        <meta name="author" content="Jón Rúnar Helgason, jonrh.is" />
-
-        <title>Jón og Marteinn Málningarþjónusta</title>
-      </Helmet>
-
-      {/* Header navigation */}
-      <div className="container">
-        <Header />
-      </div>
-
+    <Layout isFrontPage={true}>
+      {/* Picture of Jón and Marteinn standing next to each other */}
       <section className="jonogmarteinn-standing">
         <div className="container">
           <div className="row">
@@ -400,34 +387,7 @@ const Index = (props) => {
           style={{ width: "100%", border: 0, overflow: "hidden" }}
         />
       </section>
-
-      {/* Footer */}
-      <footer className="footer bg-white">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 h-100 text-center text-lg-left my-auto">
-              <p className="mb-4 mb-lg-0">
-                &copy; Jón og Marteinn Málningarþjónusta ehf. 2019 <br />
-                Kennitala: <a href="https://www.rsk.is/fyrirtaekjaskra/leit/kennitala/6901181570">
-                690118-1570</a>, Gauksrimi 34, 800 Selfoss
-              </p>
-            </div>
-            <div className="col-lg-6 h-100 text-center text-lg-right my-auto">
-              <ul className="list-inline mb-0">
-                <li className="list-inline-item">
-                  <a
-                    href="https://www.instagram.com/jon_og_marteinn_/"
-                    aria-label="Jón & Marteinn á Instagram"
-                  >
-                    Við á Instagram
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </>
+    </Layout>
   );
 };
 
