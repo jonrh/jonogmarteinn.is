@@ -5,7 +5,7 @@ import "simple-line-icons/css/simple-line-icons.css";
 import "./../styles/landing-page.css";
 import "./../styles/jonogmarteinn.css";
 
-import Layout from "../components/Layout";
+import { LayoutNoContainer } from "../components/Layout";
 
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
 import Ibudarhus1_920x912 from "./../images/ibudarhus1-920x912.jpg";
@@ -26,7 +26,7 @@ const H3Link = ({label, href}) => <a href={href}><h3>{label}</h3></a>;
 
 const Index = (props) => {
   return (
-    <Layout isFrontPage={true}>
+    <LayoutNoContainer>
       {/* Picture of Jón and Marteinn standing next to each other */}
       <section className="jonogmarteinn-standing">
         <div className="container">
@@ -307,7 +307,7 @@ const Index = (props) => {
           style={{ width: "100%", border: 0, overflow: "hidden" }}
         />
       </section>
-    </Layout>
+    </LayoutNoContainer>
   );
 };
 
