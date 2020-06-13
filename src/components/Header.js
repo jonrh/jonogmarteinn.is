@@ -35,7 +35,7 @@ const Header = (props) => {
               </li>
               <li className="list-inline-item">&sdot;</li>
               <li className="list-inline-item">
-                <a href="/þjónustur">Þjónustur</a>
+                <a href="/málningarþjónusta">Málningarþjónusta</a>
               </li>
               <li className="list-inline-item">&sdot;</li>
               <li className="list-inline-item">

@@ -77,10 +77,10 @@ const Index = (props) => {
       {/* Þjónustur & Verkefni */}
       <section className="showcase">
         <div className="container-fluid p-0">
-          {/* Þjónustur heading */}
+          {/* Málun heading */}
           <div className="row heading no-gutters">
             <div className="col text-center">
-              <h2>Þjónustur</h2>
+              <h2>Málningarþjónusta</h2>
             </div>
           </div>
 
@@ -91,7 +91,7 @@ const Index = (props) => {
               role="img" aria-label="Hvítt íbúðarhúsnæði með gráblátt þak"
             />
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <H3Link label="Íbúðarhúsnæði" href="/þjónustur/íbúðarhúsnæði" />
+              <H3Link label="Íbúðarhúsnæði" href="/málningarþjónusta/íbúðarhúsnæði" />
               <p className="lead mb-0">
                 Einstaklingar, þakmálun, útimálun, innimálun. Litaráðgjöf. Fáðu fagmenn okkar í verkið.
               </p>
@@ -105,7 +105,7 @@ const Index = (props) => {
               role="img" aria-label="Nýmálað hvítt fjölbýlishús"
             />
             <div className="col-lg-6 my-auto showcase-text">
-              <H3Link label="Fjölbýlishús" href="/þjónustur/fjölbýlishús" />
+              <H3Link label="Fjölbýlishús" href="/málningarþjónusta/fjölbýlishús" />
               <p className="lead mb-0">
                 Búum yfir mikilli reynslu við að þjónusta fasteignafélög og húsfélög. Hvort sem um er
                 að ræða nýbyggingu eða viðhaldsvinnu.
@@ -120,7 +120,7 @@ const Index = (props) => {
               role="img" aria-label="Hvítt atvinnuhúsnæði"
             />
             <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <H3Link label="Atvinnuhúsnæði" href="/þjónustur/atvinnuhúsnæði" />
+              <H3Link label="Atvinnuhúsnæði" href="/málningarþjónusta/atvinnuhúsnæði" />
               <p className="lead mb-0">
                 Stofnanir og fyrirtæki af öllum stærðum og gerðum.
               </p>
@@ -134,7 +134,7 @@ const Index = (props) => {
               role="img" aria-label="Appelsínugult handriði í stigagangi með grábláum vegg"
             />
             <div className="col-lg-6 my-auto showcase-text">
-              <H3Link label="Sérverkefni" href="/þjónustur/sérverkefni" />
+              <H3Link label="Sérverkefni" href="/málningarþjónusta/sérverkefni" />
               <p className="lead mb-0">
                 Tökum að okkur hverskonar smærri sérverkefni. Ef það er kominn tími á að gefa pallinum
                 og skjólveggnum ást og alúð þá reddum við þér fljótt og örugglega.
@@ -230,10 +230,10 @@ const Index = (props) => {
       </section>
 
 
-      {/* Um Okkur */}
+      {/* Um Fyrirtækið */}
       <section className="testimonials text-center bg-white">
         <div className="container">
-          <h2 className="mb-5">Um Okkur</h2>
+          <h2 className="mb-5">Um Fyrirtækið</h2>
           <div className="row mb-5 text-justify">
             <div className="col-11 col-md-10 col-lg-8 mx-auto">
               <p className="lead">
