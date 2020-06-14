@@ -22,3 +22,8 @@ a:hover {
 .features-icons {
     padding-top: 0;
 }
+
+/* Overwrite theme, icons should not grow bigger on hover if they can't be interacted with. */
+.features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 4.5rem;
+}

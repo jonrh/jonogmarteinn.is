@@ -49,7 +49,7 @@ const Index = (props) => {
             <div className="col-lg-4">
               <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                 <div className="features-icons-icon d-flex">
-                  <i className="icon-diamond m-auto red-theme" />
+                  <i className="icon-diamond m-auto" />
                 </div>
                 <h3>Nýmálun</h3>
               </div>
@@ -57,7 +57,7 @@ const Index = (props) => {
             <div className="col-lg-4">
               <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                 <div className="features-icons-icon d-flex">
-                  <i className="icon-layers m-auto red-theme" />
+                  <i className="icon-layers m-auto" />
                 </div>
                 <h3>Viðhaldsvinna</h3>
               </div>
@@ -65,7 +65,7 @@ const Index = (props) => {
             <div className="col-lg-4">
               <div className="features-icons-item mx-auto mb-0 mb-lg-3">
                 <div className="features-icons-icon d-flex">
-                  <i className="icon-badge m-auto red-theme" />
+                  <i className="icon-badge m-auto" />
                 </div>
                 <h3>Spörslun</h3>
               </div>
