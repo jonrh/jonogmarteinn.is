@@ -1,12 +1,7 @@
 import React from "react";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "simple-line-icons/css/simple-line-icons.css";
-import "./../styles/landing-page.css";
-import "./../styles/jonogmarteinn.css";
-
-import s from "./index.module.css";
 import { LayoutNoContainer } from "../components/Layout";
+import s from "./index.module.css";
 
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
 import Ibudarhus1_920x912 from "./../images/ibudarhus1-920x912.jpg";
