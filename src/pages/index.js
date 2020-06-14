@@ -5,6 +5,7 @@ import "simple-line-icons/css/simple-line-icons.css";
 import "./../styles/landing-page.css";
 import "./../styles/jonogmarteinn.css";
 
+import s from "./index.module.css";
 import { LayoutNoContainer } from "../components/Layout";
 
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
@@ -23,6 +24,22 @@ import Profile2_Marteinn from "./../images/profile2_marteinn.jpg";
 /** Convenience function to return a React style object with a background image */
 const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
 const H3Link = ({label, href}) => <a href={href}><h3>{label}</h3></a>;
+
+/** An icon with a label under it. iconName: Simple Line Icon name. Example: "icon-diamond" */
+const FeatureIcon = ({label, iconName}) => {
+  const iconClassName = `${iconName} m-auto`;
+
+  return (
+    <div className="col-lg-4">
+      <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+        <div className="features-icons-icon d-flex">
+          <i className={iconClassName} />
+        </div>
+        <h3>{label}</h3>
+      </div>
+    </div>
+  );
+}
 
 const Index = (props) => {
   return (
@@ -46,30 +63,9 @@ const Index = (props) => {
       <section className="features-icons bg-white text-center">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
-              <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                <div className="features-icons-icon d-flex">
-                  <i className="icon-diamond m-auto" />
-                </div>
-                <h3>Nýmálun</h3>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                <div className="features-icons-icon d-flex">
-                  <i className="icon-layers m-auto" />
-                </div>
-                <h3>Viðhaldsvinna</h3>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="features-icons-item mx-auto mb-0 mb-lg-3">
-                <div className="features-icons-icon d-flex">
-                  <i className="icon-badge m-auto" />
-                </div>
-                <h3>Spörslun</h3>
-              </div>
-            </div>
+            <FeatureIcon label="Nýmálun" iconName="icon-diamond" />
+            <FeatureIcon label="Viðhaldsvinna" iconName="icon-layers" />
+            <FeatureIcon label="Spörslun" iconName="icon-badge" />
           </div>
         </div>
       </section>
@@ -77,68 +73,70 @@ const Index = (props) => {
       {/* Þjónustur & Verkefni */}
       <section className="showcase">
         <div className="container-fluid p-0">
-          {/* Málun heading */}
+          {/* Málningarþjónusta heading */}
           <div className="row heading no-gutters">
             <div className="col text-center">
               <h2>Málningarþjónusta</h2>
             </div>
           </div>
 
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 order-lg-2 text-white showcase-img"
-              style={ backgroundImage(Ibudarhus1_920x912) }
-              role="img" aria-label="Hvítt íbúðarhúsnæði með gráblátt þak"
-            />
-            <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <H3Link label="Íbúðarhúsnæði" href="/málningarþjónusta/íbúðarhúsnæði" />
-              <p className="lead mb-0">
-                Einstaklingar, þakmálun, útimálun, innimálun. Litaráðgjöf. Fáðu fagmenn okkar í verkið.
-              </p>
+          <div className={s.lightGrayBackground}>
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 order-lg-2 text-white showcase-img"
+                style={ backgroundImage(Ibudarhus1_920x912) }
+                role="img" aria-label="Hvítt íbúðarhúsnæði með gráblátt þak"
+              />
+              <div className="col-lg-6 order-lg-1 my-auto showcase-text">
+                <H3Link label="Íbúðarhúsnæði" href="/málningarþjónusta/íbúðarhúsnæði" />
+                <p className="lead mb-0">
+                  Einstaklingar, þakmálun, útimálun, innimálun. Litaráðgjöf. Fáðu fagmenn okkar í verkið.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 text-white showcase-img"
-              style={ backgroundImage(Fjolbylishus1) }
-              role="img" aria-label="Nýmálað hvítt fjölbýlishús"
-            />
-            <div className="col-lg-6 my-auto showcase-text">
-              <H3Link label="Fjölbýlishús" href="/málningarþjónusta/fjölbýlishús" />
-              <p className="lead mb-0">
-                Búum yfir mikilli reynslu við að þjónusta fasteignafélög og húsfélög. Hvort sem um er
-                að ræða nýbyggingu eða viðhaldsvinnu.
-              </p>
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 text-white showcase-img"
+                style={ backgroundImage(Fjolbylishus1) }
+                role="img" aria-label="Nýmálað hvítt fjölbýlishús"
+              />
+              <div className="col-lg-6 my-auto showcase-text">
+                <H3Link label="Fjölbýlishús" href="/málningarþjónusta/fjölbýlishús" />
+                <p className="lead mb-0">
+                  Búum yfir mikilli reynslu við að þjónusta fasteignafélög og húsfélög. Hvort sem um er
+                  að ræða nýbyggingu eða viðhaldsvinnu.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 order-lg-2 text-white showcase-img"
-              style={ backgroundImage(Atvinnu1) }
-              role="img" aria-label="Hvítt atvinnuhúsnæði"
-            />
-            <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <H3Link label="Atvinnuhúsnæði" href="/málningarþjónusta/atvinnuhúsnæði" />
-              <p className="lead mb-0">
-                Stofnanir og fyrirtæki af öllum stærðum og gerðum.
-              </p>
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 order-lg-2 text-white showcase-img"
+                style={ backgroundImage(Atvinnu1) }
+                role="img" aria-label="Hvítt atvinnuhúsnæði"
+              />
+              <div className="col-lg-6 order-lg-1 my-auto showcase-text">
+                <H3Link label="Atvinnuhúsnæði" href="/málningarþjónusta/atvinnuhúsnæði" />
+                <p className="lead mb-0">
+                  Stofnanir og fyrirtæki af öllum stærðum og gerðum.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 text-white showcase-img"
-              style={ backgroundImage(Serverkefni1_804x820) }
-              role="img" aria-label="Appelsínugult handriði í stigagangi með grábláum vegg"
-            />
-            <div className="col-lg-6 my-auto showcase-text">
-              <H3Link label="Sérverkefni" href="/málningarþjónusta/sérverkefni" />
-              <p className="lead mb-0">
-                Tökum að okkur hverskonar smærri sérverkefni. Ef það er kominn tími á að gefa pallinum
-                og skjólveggnum ást og alúð þá reddum við þér fljótt og örugglega.
-              </p>
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 text-white showcase-img"
+                style={ backgroundImage(Serverkefni1_804x820) }
+                role="img" aria-label="Appelsínugult handriði í stigagangi með grábláum vegg"
+              />
+              <div className="col-lg-6 my-auto showcase-text">
+                <H3Link label="Sérverkefni" href="/málningarþjónusta/sérverkefni" />
+                <p className="lead mb-0">
+                  Tökum að okkur hverskonar smærri sérverkefni. Ef það er kominn tími á að gefa pallinum
+                  og skjólveggnum ást og alúð þá reddum við þér fljótt og örugglega.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -149,81 +147,83 @@ const Index = (props) => {
             </div>
           </div>
 
-          {/* Fosshótel */}
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 order-lg-2 text-white showcase-img"
-              style={ backgroundImage(Fosshotel3) }
-              role="img" aria-label="Mynd tekin fyrir framan Fosshótel á Hnappavöllum"
-            />
-            <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <H3Link label="Fosshótel" href="/verkefni/fosshótel" />
-              <p className="lead mb-0">
-                Verkefni í vinnslu fyrir Fosshótel á Hnappavöllum við Jökulsárlón. Endurmálun á ytra
-                tréverki sem og innanhús á hótelinu.
-              </p>
+          <div className={s.lightGrayBackground}>
+            {/* Fosshótel */}
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 order-lg-2 text-white showcase-img"
+                style={ backgroundImage(Fosshotel3) }
+                role="img" aria-label="Mynd tekin fyrir framan Fosshótel á Hnappavöllum"
+              />
+              <div className="col-lg-6 order-lg-1 my-auto showcase-text">
+                <H3Link label="Fosshótel" href="/verkefni/fosshótel" />
+                <p className="lead mb-0">
+                  Verkefni í vinnslu fyrir Fosshótel á Hnappavöllum við Jökulsárlón. Endurmálun á ytra
+                  tréverki sem og innanhús á hótelinu.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* Lindex */}
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 text-white showcase-img"
-              style={ backgroundImage(Lindex) }
-              role="img" aria-label="Jón Hafdal að kítta við andyri Lindex verslunar í Kaupmannahöfn"
-            />
-            <div className="col-lg-6 my-auto showcase-text">
-              <H3Link label="Lindex" href="/verkefni/lindex" />
-              <p className="lead mb-0">
-                Höfum séð alfarið um málningarþjónustu fyrir Lindex á Íslandi frá því að fyrsta verslun
-                opnaði árið 2011. Höfum einnig tekið að okkur verkefni í Kaupmannahöfn.
-              </p>
+            {/* Lindex */}
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 text-white showcase-img"
+                style={ backgroundImage(Lindex) }
+                role="img" aria-label="Jón Hafdal að kítta við andyri Lindex verslunar í Kaupmannahöfn"
+              />
+              <div className="col-lg-6 my-auto showcase-text">
+                <H3Link label="Lindex" href="/verkefni/lindex" />
+                <p className="lead mb-0">
+                  Höfum séð alfarið um málningarþjónustu fyrir Lindex á Íslandi frá því að fyrsta verslun
+                  opnaði árið 2011. Höfum einnig tekið að okkur verkefni í Kaupmannahöfn.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* Sólvangur Hjúkrunarheimili */}
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 order-lg-2 text-white showcase-img"
-              style={ backgroundImage(Solvangur1) }
-              role="img" aria-label="Sameiginlegt rými með hvítum veggjum"
-            />
-            <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <H3Link label="Sólvangur Hjúkrunarheimili" href="/verkefni/sólvangur" />
-              <p className="lead mb-0">
-                Höfum nýlokið við alla sparsl og málningarvinnu í glæsilegu hjúkrunarheimili Sólvangs í
-                Hafnarfirði.
-              </p>
+            {/* Sólvangur Hjúkrunarheimili */}
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 order-lg-2 text-white showcase-img"
+                style={ backgroundImage(Solvangur1) }
+                role="img" aria-label="Sameiginlegt rými með hvítum veggjum"
+              />
+              <div className="col-lg-6 order-lg-1 my-auto showcase-text">
+                <H3Link label="Sólvangur Hjúkrunarheimili" href="/verkefni/sólvangur" />
+                <p className="lead mb-0">
+                  Höfum nýlokið við alla sparsl og málningarvinnu í glæsilegu hjúkrunarheimili Sólvangs í
+                  Hafnarfirði.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* Blikahöfði */}
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 text-white showcase-img"
-              style={ backgroundImage(Blikahofdi1) }
-              role="img" aria-label="Dökk og ljósgræn málað fjölbýlishús á þremur hæðum"
-            />
-            <div className="col-lg-6 my-auto showcase-text">
-              <H3Link label="Blikahöfði 5 - 7" href="/verkefni/blikahöfði5-7" />
-              <p className="lead mb-0">
-                Endurmálun fyrir húsfélag Blikhöfða 5 - 7. Útimálun á veggjum og tréverki.
-              </p>
+            {/* Blikahöfði */}
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 text-white showcase-img"
+                style={ backgroundImage(Blikahofdi1) }
+                role="img" aria-label="Dökk og ljósgræn málað fjölbýlishús á þremur hæðum"
+              />
+              <div className="col-lg-6 my-auto showcase-text">
+                <H3Link label="Blikahöfði 5 - 7" href="/verkefni/blikahöfði5-7" />
+                <p className="lead mb-0">
+                  Endurmálun fyrir húsfélag Blikhöfða 5 - 7. Útimálun á veggjum og tréverki.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* Vegghamrar */}
-          <div className="row no-gutters">
-            <div
-              className="col-lg-6 order-lg-2 text-white showcase-img"
-              style={ backgroundImage(Vegghamrar1) }
-              role="img" aria-label="Ljós-ljós brúnt málað fjölbýlishús á tvemur hæðum"
-            />
-            <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-              <H3Link label="Vegghamrar 2 - 10" href="verkefni/vegghamrar2-10" />
-              <p className="lead mb-0">
-                Viðhald fyrir húsfélag Vegghamra 2 - 10. Útimálun á öllum veggjum og tréverki.
-              </p>
+            {/* Vegghamrar */}
+            <div className="row no-gutters">
+              <div
+                className="col-lg-6 order-lg-2 text-white showcase-img"
+                style={ backgroundImage(Vegghamrar1) }
+                role="img" aria-label="Ljós-ljós brúnt málað fjölbýlishús á tvemur hæðum"
+              />
+              <div className="col-lg-6 order-lg-1 my-auto showcase-text">
+                <H3Link label="Vegghamrar 2 - 10" href="verkefni/vegghamrar2-10" />
+                <p className="lead mb-0">
+                  Viðhald fyrir húsfélag Vegghamra 2 - 10. Útimálun á öllum veggjum og tréverki.
+                </p>
+              </div>
             </div>
           </div>
         </div>
