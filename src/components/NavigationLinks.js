@@ -12,15 +12,17 @@ const ListLink = ({label, href}) => {
 /** Used in the header and footer of all pages */
 const NavigationLinks = () => {
   return (
-    <ul className="list-inline">
-      <ListLink label="Forsíða" href="/" />
-      <ListLinkSeperator />
-      <ListLink label="Málningarþjónusta" href="/málningarþjónusta" />
-      <ListLinkSeperator />
-      <ListLink label="Verkefni" href="/verkefni" />
-      <ListLinkSeperator />
-      <ListLink label="Um Fyrirtækið" href="/fyrirtækið" />
-    </ul>
+    <nav>
+      <ul className="list-inline">
+        <ListLink label="Forsíða" href="/" />
+        <ListLinkSeperator />
+        <ListLink label="Málningarþjónusta" href="/málningarþjónusta" />
+        <ListLinkSeperator />
+        <ListLink label="Verkefni" href="/verkefni" />
+        <ListLinkSeperator />
+        <ListLink label="Um Fyrirtækið" href="/fyrirtækið" />
+      </ul>
+    </nav>
   );
 };
 
