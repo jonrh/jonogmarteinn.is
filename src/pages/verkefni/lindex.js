@@ -14,13 +14,11 @@ const Lindex = (props) => {
       <h1 className="text-center">Lindex</h1>
 
       <Row className="mb-5">
-        <Col>
-          <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">
-            <p>
-              Höfum séð alfarið um málningarþjónustu fyrir Lindex á Íslandi frá því að fyrsta verslun
-              opnaði árið 2011. Höfum einnig tekið að okkur verkefni í Kaupmannahöfn.
-            </p>
-          </Col>
+        <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">
+          <p>
+            Höfum séð alfarið um málningarþjónustu fyrir Lindex á Íslandi frá því að fyrsta verslun
+            opnaði árið 2011. Höfum einnig tekið að okkur verkefni í Kaupmannahöfn.
+          </p>
         </Col>
       </Row>
 
