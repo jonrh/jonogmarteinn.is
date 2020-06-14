@@ -76,7 +76,7 @@ const Index = (props) => {
           {/* Málningarþjónusta heading */}
           <div className="row heading no-gutters">
             <div className="col text-center">
-              <h2>Málningarþjónusta</h2>
+              <h2 className="h1">Málningarþjónusta</h2>
             </div>
           </div>
 
@@ -143,7 +143,7 @@ const Index = (props) => {
           {/* Verkefni heading */}
           <div className="row heading no-gutters">
             <div className="col text-center">
-              <h2>Verkefni</h2>
+              <h2 className="h1">Verkefni</h2>
             </div>
           </div>
 
@@ -233,7 +233,7 @@ const Index = (props) => {
       {/* Um Fyrirtækið */}
       <section className="testimonials text-center bg-white">
         <div className="container">
-          <h2 className="mb-5">Um Fyrirtækið</h2>
+          <h2 className="h1 mb-5">Um Fyrirtækið</h2>
           <div className="row mb-5 text-justify">
             <div className="col-11 col-md-10 col-lg-8 mx-auto">
               <p className="lead">
