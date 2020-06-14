@@ -1,5 +1,9 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
+import NavigationLinks from "./NavigationLinks";
+
+const INSTAGRAM_URL = "https://www.instagram.com/jon_og_marteinn_/";
 const RSK_URL = "https://www.rsk.is/fyrirtaekjaskra/leit/kennitala/6901181570";
 
 const getCopyrightString = () => {
@@ -9,47 +13,23 @@ const getCopyrightString = () => {
 
 const Footer = (props) => {
   return (
-    <footer className="footer bg-white">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <ul className="list-inline mb-4">
-              <li className="list-inline-item">
-                <a href="/">Forsíða</a>
-              </li>
-              <li className="list-inline-item">&sdot;</li>
-              <li className="list-inline-item">
-                <a href="/málningarþjónusta">Málningarþjónusta</a>
-              </li>
-              <li className="list-inline-item">&sdot;</li>
-              <li className="list-inline-item">
-                <a href="/verkefni">Verkefni</a>
-              </li>
-              <li className="list-inline-item">&sdot;</li>
-              <li className="list-inline-item">
-                <a href="/fyrirtækið">Um Fyrirtækið</a>
-              </li>
-            </ul>
+    <footer className="text-center" style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
+      <Container>
+        <NavigationLinks />
 
-            <p className="text-muted mb-4 mb-lg-0">
-              {getCopyrightString()} <br />
-              Kennitala: <a href={RSK_URL}>690118-1570</a>, Gauksrimi 34, 800 Selfoss
-            </p>
-          </div>
-          <div className="col-lg-6 h-100 text-center text-lg-right align-items-start">
-            <ul className="list-inline mb-0">
-              <li className="list-inline-item">
-                <a
-                  href="https://www.instagram.com/jon_og_marteinn_/"
-                  aria-label="Jón & Marteinn á Instagram"
-                >
-                  Við á Instagram
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <p className="text-muted mb-4">
+          {getCopyrightString()} <br />
+          Kennitala: <a href={RSK_URL}>690118-1570</a>, Gauksrimi 34, 800 Selfoss
+        </p>
+
+        <ul className="list-inline">
+          <li className="list-inline-item">
+            <a href={INSTAGRAM_URL} aria-label="Jón & Marteinn á Instagram">
+              Við á Instagram
+            </a>
+          </li>
+        </ul>
+      </Container>
     </footer>
   );
 };

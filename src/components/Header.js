@@ -1,24 +1,27 @@
 import React from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
+import { Container, Row, Col, Image } from "react-bootstrap";
 
-import s from "./Header.module.css";
+import NavigationLinks from "./NavigationLinks";
 import simplifiedLogo from "../images/logo/simplified logo v1.svg";
-import {Container} from "react-bootstrap";
 
+/** Logo, title, description and navigation links at the top of every page */
 const Header = (props) => {
   return (
     <header className="py-5">
       <Container>
-        {/* Logo and heading */}
+        {/* Logo */}
         <Row className="justify-content-center">
           <Col xl={1} lg={2} md={2} xs={3}>
-            <a href="/" aria-label="Forsíða" className={s.header}>
-              <Image src={simplifiedLogo} alt="Jón & Marteinn logo, red house facade with windows" />
+            <a href="/" aria-label="Forsíða">
+              <Image
+                src={simplifiedLogo}
+                alt="Jón & Marteinn logo, red house facade with windows"
+              />
             </a>
           </Col>
         </Row>
+
+        {/* Title & description */}
         <Row className="mt-3">
           <Col className="text-center">
             <h2 className="mb-0">Jón & Marteinn</h2>
@@ -29,23 +32,7 @@ const Header = (props) => {
         {/* Navigation links */}
         <Row>
           <Col className="mt-3 mb-0 mb-lg-0 text-center">
-            <ul className={`list-inline mb-0 ${s.headerLinks}`}>
-              <li className="list-inline-item">
-                <a href="/">Forsíða</a>
-              </li>
-              <li className="list-inline-item">&sdot;</li>
-              <li className="list-inline-item">
-                <a href="/málningarþjónusta">Málningarþjónusta</a>
-              </li>
-              <li className="list-inline-item">&sdot;</li>
-              <li className="list-inline-item">
-                <a href="/verkefni">Verkefni</a>
-              </li>
-              <li className="list-inline-item">&sdot;</li>
-              <li className="list-inline-item">
-                <a href="/fyrirtækið">Um Fyrirtækið</a>
-              </li>
-            </ul>
+            <NavigationLinks />
           </Col>
         </Row>
       </Container>
