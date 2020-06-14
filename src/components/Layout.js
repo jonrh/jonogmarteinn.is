@@ -22,6 +22,14 @@ const DefaultHtmlHead = (props) => {
       <meta name="description" content={metaDescription} />
       <meta name="author" content="Jón Rúnar Helgason, jonrh.is" />
 
+      {/* Favicon related settings */}
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <meta name="msapplication-TileColor" content="#2d89ef" />
+      <link rel="manifest" href="/manifest.webmanifest" />
+      <meta name="theme-color" content="#cf1717" />
+
       <title>Jón og Marteinn Málningarþjónusta</title>
     </Helmet>
   );
