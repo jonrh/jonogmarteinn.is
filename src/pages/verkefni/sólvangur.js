@@ -16,12 +16,16 @@ import Solvangur7 from "./../../images/solvangur/solvangur7.jpg";
 const Sólvangur = (props) => {
   return (
     <Layout>
-      <h1>Sólvangur Hjúkrunarheimili</h1>
-      <p>
-        Höfum nýlokið við alla sparsl og málningarvinnu í glæsilegu hjúkrunarheimili Sólvangs í
-        Hafnarfirði.
-      </p>
+      <h1 className="text-center">Sólvangur Hjúkrunarheimili</h1>
 
+      <Row className="mb-5">
+        <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">
+          <p>
+            Höfum nýlokið við alla sparsl og málningarvinnu í glæsilegu hjúkrunarheimili Sólvangs í
+            Hafnarfirði.
+          </p>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <FullWidthImage src={Solvangur1} />
@@ -48,10 +52,10 @@ const Sólvangur = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col >
+        <Col sm={6} xs={12}>
           <FullWidthImage src={Solvangur7} />
         </Col>
-        <Col>
+        <Col sm={6} xs={12}>
           <FullWidthImage src={Solvangur6} />
         </Col>
       </Row>

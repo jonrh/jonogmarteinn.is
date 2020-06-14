@@ -16,9 +16,13 @@ import Fosshotel6 from "./../../images/fosshotel/fosshotel6.jpg";
 const Fosshótel = (props) => {
   return (
     <Layout>
-      <h1>Fosshótel á Hnappavöllum</h1>
-      <p>Endurmálun á ytra tréverki sem og innanhús á hótelinu.</p>
+      <h1 className="text-center">Fosshótel á Hnappavöllum</h1>
 
+      <Row className="mb-5">
+        <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">
+          <p>Endurmálun á ytra tréverki sem og innanhús á hótelinu.</p>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <FullWidthImage src={Fosshotel3} />
@@ -30,10 +34,10 @@ const Fosshótel = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col xs={6}>
+        <Col >
           <FullWidthImage src={Fosshotel5} />
         </Col>
-        <Col xs={6}>
+        <Col sm={6} xs={12}>
           <FullWidthImage src={Fosshotel2} />
         </Col>
       </Row>
