@@ -7,10 +7,9 @@ import FullWidthImage from "../../components/FullWidthImage";
 
 import LindexPic1 from "./../../images/lindex.jpg";
 
-
-const Lindex = (props) => {
+export const Lindex = (props) => {
   return (
-    <Layout>
+    <>
       <h1 className="text-center">Lindex</h1>
 
       <Row className="mb-5">
@@ -27,8 +26,9 @@ const Lindex = (props) => {
           <FullWidthImage src={LindexPic1} />
         </Col>
       </Row>
-    </Layout>
+    </>
   );
 };
 
-export default Lindex;
+const LindexPage = () => <Layout><Lindex /></Layout>;
+export default LindexPage;

@@ -13,9 +13,9 @@ import Solvangur5 from "./../../images/solvangur/solvangur5.jpg";
 import Solvangur6 from "./../../images/solvangur/solvangur6.jpg";
 import Solvangur7 from "./../../images/solvangur/solvangur7.jpg";
 
-const Sólvangur = (props) => {
+export const Sólvangur = (props) => {
   return (
-    <Layout>
+    <>
       <h1 className="text-center">Sólvangur Hjúkrunarheimili</h1>
 
       <Row className="mb-5">
@@ -59,8 +59,9 @@ const Sólvangur = (props) => {
           <FullWidthImage src={Solvangur6} />
         </Col>
       </Row>
-    </Layout>
+    </>
   );
 };
 
-export default Sólvangur;
+const SólvangurPage = () => <Layout><Sólvangur /></Layout>;
+export default SólvangurPage;

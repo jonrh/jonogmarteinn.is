@@ -7,9 +7,9 @@ import FullWidthImage from "../../components/FullWidthImage";
 
 import VegghamrarPic1 from "./../../images/vegghamrar2-10/vegghamrar1.jpg";
 
-const Vegghamrar = (props) => {
+export const Vegghamrar = (props) => {
   return (
-    <Layout>
+    <>
       <h1 className="text-center">Vegghamrar 2 - 10</h1>
 
       <Row className="mb-5">
@@ -24,8 +24,9 @@ const Vegghamrar = (props) => {
           <FullWidthImage src={VegghamrarPic1} />
         </Col>
       </Row>
-    </Layout>
+    </>
   );
 };
 
-export default Vegghamrar;
+const VegghamrarPage = (props) => <Layout><Vegghamrar /></Layout>;
+export default VegghamrarPage;

@@ -12,10 +12,9 @@ import Fosshotel4 from "./../../images/fosshotel/fosshotel4.jpg";
 import Fosshotel5 from "./../../images/fosshotel/fosshotel5.jpg";
 import Fosshotel6 from "./../../images/fosshotel/fosshotel6.jpg";
 
-
-const Fosshótel = (props) => {
+export const Fosshótel = (props) => {
   return (
-    <Layout>
+    <>
       <h1 className="text-center">Fosshótel á Hnappavöllum</h1>
 
       <Row className="mb-5">
@@ -51,8 +50,9 @@ const Fosshótel = (props) => {
           <FullWidthImage src={Fosshotel4} />
         </Col>
       </Row>
-    </Layout>
+    </>
   );
 };
 
-export default Fosshótel;
+const FosshótelPage = () => <Layout><Fosshótel /></Layout>;
+export default FosshótelPage;

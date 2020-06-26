@@ -2,6 +2,13 @@ import React from "react";
 import {Col, Row} from "react-bootstrap";
 
 import Layout from "../../components/Layout";
+import {Fosshótel} from "./fosshótel";
+import {Lindex} from "./lindex";
+import {Sólvangur} from "./sólvangur";
+import {Blikahöfði} from "./blikahöfði5-7";
+import {Vegghamrar} from "./vegghamrar2-10";
+
+const Spacer = () => <div className="my-5" />;
 
 const Verkefni = (props) => {
   return (
@@ -19,6 +26,17 @@ const Verkefni = (props) => {
           </p>
         </Col>
       </Row>
+
+      <Spacer />
+      <Fosshótel />
+      <Spacer />
+      <Lindex />
+      <Spacer />
+      <Sólvangur />
+      <Spacer />
+      <Blikahöfði />
+      <Spacer />
+      <Vegghamrar />
     </Layout>
   );
 };
