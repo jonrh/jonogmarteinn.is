@@ -2,6 +2,8 @@ import React from "react";
 import {Col, Row} from "react-bootstrap";
 
 import Layout from "../components/Layout";
+
+import pic1 from "../images/málarameistari.jpg";
 import Profile1_Jon from "../images/profile1_jon.jpg";
 import Profile2_Marteinn from "../images/profile2_marteinn.jpg";
 
@@ -33,6 +35,16 @@ const Málarameistari = () => {
       <h1 className="text-center">Málarameistari</h1>
 
       <section>
+        <Row>
+          <Col>
+            <img
+              src={pic1}
+              className="img-fluid mb-3"
+              alt="Málarameistarinn Jón Hafdal standandi við hlið Marteins"
+            />
+          </Col>
+        </Row>
+
         <Row className="pt-5">
           <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">
             <p className="lead">
