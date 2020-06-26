@@ -7,6 +7,7 @@ import {Lindex} from "./lindex";
 import {Sólvangur} from "./sólvangur";
 import {Blikahöfði} from "./blikahöfði5-7";
 import {Vegghamrar} from "./vegghamrar2-10";
+import {Vefarastræti} from "./vefarastræti";
 
 const Spacer = () => <div className="my-5" />;
 
@@ -18,6 +19,7 @@ const Verkefni = (props) => {
       <Row>
         <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">
           <p>
+            <a href="/verkefni/vefarastræti">Vefarastræti</a> <br />
             <a href="/verkefni/fosshótel">Fosshótel</a> <br />
             <a href="/verkefni/lindex">Lindex</a> <br />
             <a href="/verkefni/sólvangur">Sólvangur Hjúkrunarheimili</a> <br />
@@ -27,6 +29,8 @@ const Verkefni = (props) => {
         </Col>
       </Row>
 
+      <Spacer />
+      <Vefarastræti />
       <Spacer />
       <Fosshótel />
       <Spacer />

@@ -5,7 +5,7 @@ import s from "./index.module.css";
 
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
 import Ibudarhus1_920x912 from "./../images/ibudarhus1-920x912.jpg";
-import Fjolbylishus1 from "./../images/fjolbylishus1.jpg";
+import Fjolbylishus1 from "./verkefni/vefarastræti/vefarastraeti_fjolbylishus_nymalun_1.jpg";
 import Atvinnu1 from "./../images/atvinnu1.jpg";
 import Serverkefni1_804x820 from "./../images/serverkefni1-804x820.jpg";
 import Fosshotel3 from "./../images/fosshotel/fosshotel3.jpg";
