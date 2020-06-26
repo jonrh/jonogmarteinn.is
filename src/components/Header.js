@@ -4,8 +4,26 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import NavigationLinks from "./NavigationLinks";
 import simplifiedLogo from "../images/logo/simplified logo v1.svg";
 
+/** Use <h1> when on the frontpage for better SEO */
+const FrontPageHeading = (props) => (
+  <h1 className="h2" style={{ fontWeight: 700 }}>
+    Jón & Marteinn <br />
+    <span className="h3">alhliða málningarþjónusta</span>
+  </h1>
+);
+
+/** Use a <h3> on all subpages for better SEO */
+const SubPageHeading = (props) => (
+  <h3 className="h2" style={{ fontWeight: 700 }}>
+    Jón & Marteinn <br />
+    <span className="h3">alhliða málningarþjónusta</span>
+  </h3>
+);
+
 /** Logo, title, description and navigation links at the top of every page */
 const Header = (props) => {
+  const heading = props.isFrontpage ? <FrontPageHeading /> : <SubPageHeading />;
+
   return (
     <header className="py-5">
       <Container>
@@ -24,8 +42,7 @@ const Header = (props) => {
         {/* Title & description */}
         <Row className="mt-3">
           <Col className="text-center">
-            <h2 className="mb-0">Jón & Marteinn</h2>
-            <h3 className="mt-2">alhliða málningarþjónusta</h3>
+            {heading}
           </Col>
         </Row>
 

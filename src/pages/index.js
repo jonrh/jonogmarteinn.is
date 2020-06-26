@@ -38,7 +38,7 @@ const FeatureIcon = ({label, iconName}) => {
 
 const Index = (props) => {
   return (
-    <LayoutNoContainer>
+    <LayoutNoContainer isFrontpage={true}>
       {/* Picture of Jón and Marteinn standing next to each other */}
       <section className="jonogmarteinn-standing">
         <div className="container">

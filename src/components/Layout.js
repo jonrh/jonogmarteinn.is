@@ -40,7 +40,7 @@ export const LayoutNoContainer = (props) => {
   return (
     <>
       <DefaultHtmlHead />
-      <Header />
+      <Header isFrontpage={props.isFrontpage} />
       {props.children}
       <Footer />
     </>
