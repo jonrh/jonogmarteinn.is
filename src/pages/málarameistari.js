@@ -36,15 +36,16 @@ const Málarameistari = () => {
         <Row className="pt-5">
           <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">
             <p className="lead">
-              Jón og Marteinn Málningarþjónusta ehf. er fyrirtæki sem tekur að sér öll
-              almenn málningarverkefni. Verkefni stór sem smá, sérsniðið að óskum og þörfum og
-              hvar sem er á landinu. Höfum einnig tekið að okkur verkefni erlendis.
+              Jón Hafdal er <strong>löggiltur málarameistari</strong> og hefur að baki 15 ára
+              reynslu af málun, Marteinn 20 ár. Saman stofnuðu þeir fyrirtækið Jón og Marteinn
+              Málningarþjónusta ehf.
             </p>
 
             <p className="lead">
-              Jón Hafdal er <strong>löggiltur málarameistari</strong> og hefur að baki 15 ára
-              reynslu af málun, Marteinn 20 ár. Hjá fyrirtækinu starfa samtals 8 starfsmenn
-              meðtalið Jóni og Marteini.
+              Fyrirtækið tekur að sér öll almenn málningarverkefni. Verkefni stór sem smá,
+              sérsniðið að óskum og þörfum og hvar sem er á landinu. Höfum einnig tekið að okkur
+              verkefni erlendis. Hjá fyrirtækinu starfa samtals 8 starfsmenn meðtalið Jóni og
+              Marteini.
             </p>
           </Col>
         </Row>
