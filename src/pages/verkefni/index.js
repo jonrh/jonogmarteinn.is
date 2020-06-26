@@ -13,8 +13,7 @@ import {Vegghamrar} from "./vegghamrar2-10";
 const Verkefni = (props) => {
   const projectComponents = [Vefarastræti, Fosshótel, Lindex, Sólvangur, Blikahöfði, Vegghamrar];
   const projects = projectComponents.map((Project, index) => (
-    <section key={index}>
-      <div className="my-5" />
+    <section key={index} className="my-5">
       <Project hLevel="h2" />
     </section>
   ));
