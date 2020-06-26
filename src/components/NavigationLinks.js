@@ -20,7 +20,7 @@ const NavigationLinks = () => {
         <ListLinkSeperator />
         <ListLink label="Verkefni" href="/verkefni" />
         <ListLinkSeperator />
-        <ListLink label="Um Fyrirtækið" href="/fyrirtækið" />
+        <ListLink label="Málarameistari" href="/málarameistari" />
       </ul>
     </nav>
   );

@@ -27,10 +27,10 @@ const Owner = ({name, image, phoneNumber}) => {
   );
 };
 
-const Fyrirtækið = () => {
+const Málarameistari = () => {
   return (
     <Layout>
-      <h1 className="text-center">Um Fyrirtækið</h1>
+      <h1 className="text-center">Málarameistari</h1>
 
       <section>
         <Row className="pt-5">
@@ -59,4 +59,4 @@ const Fyrirtækið = () => {
   );
 };
 
-export default Fyrirtækið;
+export default Málarameistari;
