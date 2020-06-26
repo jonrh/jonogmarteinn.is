@@ -185,7 +185,7 @@ const Index = (props) => {
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
                 <H3Link label="Sólvangur Hjúkrunarheimili" href="/verkefni/sólvangur" />
                 <p className="lead mb-0">
-                  Höfum nýlokið við alla sparsl og málningarvinnu í glæsilegu hjúkrunarheimili Sólvangs í
+                  Sparsl og innanhús málun fyrir nýtt og glæsilegt hjúkrunarheimili Sólvangs í
                   Hafnarfirði.
                 </p>
               </div>

@@ -21,7 +21,7 @@ export const Sólvangur = (props) => {
       <Row className="mb-5">
         <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">
           <p>
-            Höfum nýlokið við alla sparsl og málningarvinnu í glæsilegu hjúkrunarheimili Sólvangs í
+            Sparsl og innanhús málun fyrir nýtt og glæsilegt hjúkrunarheimili Sólvangs í
             Hafnarfirði.
           </p>
         </Col>
