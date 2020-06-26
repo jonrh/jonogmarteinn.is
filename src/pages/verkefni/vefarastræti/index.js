@@ -8,11 +8,12 @@ import FullWidthImage from "../../../components/FullWidthImage";
 import pic1 from "./vefarastraeti_fjolbylishus_nymalun_1.jpg";
 import pic2 from "./vefarastraeti_fjolbylishus_nymalun_2.jpg";
 import pic3 from "./vefarastraeti_fjolbylishus_nymalun_3.jpg";
+import Heading from "../../../components/Heading";
 
 export const Vefarastræti = (props) => {
   return (
     <>
-      <h1 className="text-center">Vefarastræti</h1>
+      <Heading className="text-center" h={props.hLevel}>Vefarastræti</Heading>
 
       <Row className="mb-5">
         <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">

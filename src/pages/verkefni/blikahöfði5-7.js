@@ -5,11 +5,12 @@ import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
 
 import BlikahöfðiPic1 from "./../../images/blikahofdi1.jpg";
+import Heading from "../../components/Heading";
 
 export const Blikahöfði = (props) => {
   return (
     <>
-      <h1 className="text-center">Vegghamrar 2 - 10</h1>
+      <Heading className="text-center" h={props.hLevel}>Blikahöfði 5 - 7</Heading>
 
       <Row className="mb-5">
         <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">

@@ -4,13 +4,14 @@ import Col from "react-bootstrap/Col";
 
 import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
+import Heading from "../../components/Heading";
 
 import VegghamrarPic1 from "./../../images/vegghamrar2-10/vegghamrar1.jpg";
 
 export const Vegghamrar = (props) => {
   return (
     <>
-      <h1 className="text-center">Vegghamrar 2 - 10</h1>
+      <Heading className="text-center" h={props.hLevel}>Vegghamrar 2 - 10</Heading>
 
       <Row className="mb-5">
         <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">

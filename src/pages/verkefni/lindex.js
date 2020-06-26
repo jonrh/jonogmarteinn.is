@@ -4,13 +4,14 @@ import Col from "react-bootstrap/Col";
 
 import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
+import Heading from "../../components/Heading";
 
 import LindexPic1 from "./../../images/lindex.jpg";
 
 export const Lindex = (props) => {
   return (
     <>
-      <h1 className="text-center">Lindex</h1>
+      <Heading className="text-center" h={props.hLevel}>Lindex</Heading>
 
       <Row className="mb-5">
         <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">

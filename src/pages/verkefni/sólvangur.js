@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 
 import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
+import Heading from "../../components/Heading";
 
 import Solvangur1 from "./../../images/solvangur/solvangur1.jpg";
 import Solvangur2 from "./../../images/solvangur/solvangur2.jpg";
@@ -16,7 +17,7 @@ import Solvangur7 from "./../../images/solvangur/solvangur7.jpg";
 export const Sólvangur = (props) => {
   return (
     <>
-      <h1 className="text-center">Sólvangur Hjúkrunarheimili</h1>
+      <Heading className="text-center" h={props.hLevel}>Sólvangur Hjúkrunarheimili</Heading>
 
       <Row className="mb-5">
         <Col lg={8} md={10} sm={11} xs={11} className="text-justify mx-auto">
