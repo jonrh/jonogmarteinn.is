@@ -153,8 +153,8 @@ const Index = (props) => {
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
                 <H3Link label="Fosshótel" href="/verkefni/fosshótel" />
                 <p className="lead mb-0">
-                  Verkefni í vinnslu fyrir Fosshótel á Hnappavöllum við Jökulsárlón. Endurmálun á ytra
-                  tréverki sem og innanhús á hótelinu.
+                  Endurmálun á ytra tréverki sem og innanhús á Fosshóteli á Hnappavöllum við
+                  Jökulsárlón.
                 </p>
               </div>
             </div>
@@ -225,10 +225,10 @@ const Index = (props) => {
       </section>
 
 
-      {/* Um Fyrirtækið */}
+      {/* Málarameistari */}
       <section className="testimonials text-center bg-white">
         <div className="container">
-          <h2 className="h1 mb-5">Um Fyrirtækið</h2>
+          <h2 className="h1 mb-5">Málarameistari</h2>
           <div className="row mb-5 text-justify">
             <div className="col-11 col-md-10 col-lg-8 mx-auto">
               <p className="lead">
