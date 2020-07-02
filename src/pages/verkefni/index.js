@@ -3,6 +3,7 @@ import {Col, Row} from "react-bootstrap";
 
 import Layout from "../../components/Layout";
 
+import {Hjarðarhagi24_32} from "./hjarðarhagi24-32";
 import {Vefarastræti} from "./vefarastræti";
 import {Fosshótel} from "./fosshótel";
 import {Lindex} from "./lindex";
@@ -11,7 +12,16 @@ import {Blikahöfði} from "./blikahöfði5-7";
 import {Vegghamrar} from "./vegghamrar2-10";
 
 const Verkefni = (props) => {
-  const projectComponents = [Vefarastræti, Fosshótel, Lindex, Sólvangur, Blikahöfði, Vegghamrar];
+  const projectComponents = [
+    Hjarðarhagi24_32,
+    Vefarastræti,
+    Fosshótel,
+    Lindex,
+    Sólvangur,
+    Blikahöfði,
+    Vegghamrar
+  ];
+
   const projects = projectComponents.map((Project, index) => (
     <section key={index} className="my-5">
       <Project hLevel="h2" />
@@ -25,6 +35,7 @@ const Verkefni = (props) => {
       <Row>
         <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">
           <p>
+            <a href="/verkefni/hjarðarhagi24-32">Hjarðarhagi 24 - 32</a> <br />
             <a href="/verkefni/vefarastræti">Vefarastræti</a> <br />
             <a href="/verkefni/fosshótel">Fosshótel</a> <br />
             <a href="/verkefni/lindex">Lindex</a> <br />
