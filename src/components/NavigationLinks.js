@@ -16,8 +16,8 @@ const NavigationLinks = () => {
       <ul className="list-inline">
         <ListLink label="Forsíða" href="/" />
         <ListLinkSeperator />
-        <ListLink label="Málningarþjónusta" href="/málningarþjónusta" />
-        <ListLinkSeperator />
+        {/*<ListLink label="Málningarþjónusta" href="/málningarþjónusta" />*/}
+        {/*<ListLinkSeperator />*/}
         <ListLink label="Verkefni" href="/verkefni" />
         <ListLinkSeperator />
         <ListLink label="Málarameistari" href="/málarameistari" />

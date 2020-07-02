@@ -83,7 +83,8 @@ const Index = (props) => {
                 role="img" aria-label="Hvítt íbúðarhúsnæði með gráblátt þak"
               />
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-                <H3Link label="Íbúðarhúsnæði" href="/málningarþjónusta/íbúðarhúsnæði" />
+                {/*<H3Link label="Íbúðarhúsnæði" href="/málningarþjónusta/íbúðarhúsnæði" />*/}
+                <h3>Íbúðarhúsnæði</h3>
                 <p className="lead mb-0">
                   Einstaklingar, þakmálun, útimálun, innimálun. Litaráðgjöf. Fáðu fagmenn okkar í verkið.
                 </p>
@@ -97,7 +98,8 @@ const Index = (props) => {
                 role="img" aria-label="Nýmálað hvítt fjölbýlishús"
               />
               <div className="col-lg-6 my-auto showcase-text">
-                <H3Link label="Fjölbýlishús" href="/málningarþjónusta/fjölbýlishús" />
+                {/*<H3Link label="Fjölbýlishús" href="/málningarþjónusta/fjölbýlishús" />*/}
+                <h3>Fjölbýlishús</h3>
                 <p className="lead mb-0">
                   Búum yfir mikilli reynslu við að þjónusta fasteignafélög og húsfélög. Hvort sem um er
                   að ræða nýbyggingu eða viðhaldsvinnu.
@@ -112,7 +114,8 @@ const Index = (props) => {
                 role="img" aria-label="Hvítt atvinnuhúsnæði"
               />
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
-                <H3Link label="Atvinnuhúsnæði" href="/málningarþjónusta/atvinnuhúsnæði" />
+                {/*<H3Link label="Atvinnuhúsnæði" href="/málningarþjónusta/atvinnuhúsnæði" />*/}
+                <h3>Atvinnuhúsnæði</h3>
                 <p className="lead mb-0">
                   Stofnanir og fyrirtæki af öllum stærðum og gerðum.
                 </p>
@@ -126,7 +129,8 @@ const Index = (props) => {
                 role="img" aria-label="Appelsínugult handriði í stigagangi með grábláum vegg"
               />
               <div className="col-lg-6 my-auto showcase-text">
-                <H3Link label="Sérverkefni" href="/málningarþjónusta/sérverkefni" />
+                {/*<H3Link label="Sérverkefni" href="/málningarþjónusta/sérverkefni" />*/}
+                <h3>Sérverkefni</h3>
                 <p className="lead mb-0">
                   Tökum að okkur hverskonar smærri sérverkefni. Ef það er kominn tími á að gefa pallinum
                   og skjólveggnum ást og alúð þá reddum við þér fljótt og örugglega.
@@ -138,7 +142,9 @@ const Index = (props) => {
           {/* Verkefni heading */}
           <div className="row heading no-gutters">
             <div className="col text-center">
-              <h2 className="h1">Verkefni</h2>
+              <a href="/verkefni">
+                <h2 className="h1">Verkefni</h2>
+              </a>
             </div>
           </div>
 
