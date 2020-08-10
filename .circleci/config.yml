@@ -2,7 +2,7 @@
 # Documentation: https://circleci.com/docs/2.0/configuration-reference/#section=configuration
 version: 2.1
 
-# Main entry point to the CircleCI config. When we push changes to the "master" branch in git the
+# Main entry point to the CircleCI config. When we push changes to the "main" branch in git the
 # "production" workflow runs. If changes are pushed to the "dev" branch we run the "development"
 # workflow. Commits to any other branch do not trigger any workflow.
 #
@@ -19,7 +19,7 @@ workflows:
           robotsTxt: "User-agent: *\nDisallow: " # Search engine crawling is enabled everywhere
           filters:
             branches:
-              only: "master" # Only run this workflow when the "master" branch changes
+              only: "main" # Only run this workflow when the "main" branch changes
 
   development:
     jobs:
