@@ -17,8 +17,8 @@ export const Hjarðarhagi2432 = (props) => {
       <Row className="mb-5">
         <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">
           <p>
-            Verkefni í vinnslu. Endurmálun á Hjarðarhaga 24 - 32 í Vesturbæ Reykjavíkur. Tréverk
-            á gluggum ásamt ytri veggjum.
+            Endurmálun á Hjarðarhaga 24 - 32 í Vesturbæ Reykjavíkur. Tréverk á gluggum ásamt ytri
+            veggjum.
           </p>
         </Col>
       </Row>
