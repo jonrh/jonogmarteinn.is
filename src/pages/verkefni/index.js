@@ -3,7 +3,7 @@ import {Col, Row} from "react-bootstrap";
 
 import Layout from "../../components/Layout";
 
-import {Hjarðarhagi24_32} from "./hjarðarhagi24-32";
+import {Hjarðarhagi2432} from "./hjarðarhagi24-32";
 import {Vefarastræti} from "./vefarastræti";
 import {Fosshótel} from "./fosshótel";
 import {Lindex} from "./lindex";
@@ -13,7 +13,7 @@ import {Vegghamrar} from "./vegghamrar2-10";
 
 const Verkefni = (props) => {
   const projectComponents = [
-    Hjarðarhagi24_32,
+    Hjarðarhagi2432,
     Vefarastræti,
     Fosshótel,
     Lindex,

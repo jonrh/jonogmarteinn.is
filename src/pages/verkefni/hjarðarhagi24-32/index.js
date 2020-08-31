@@ -9,7 +9,7 @@ import pic1 from "./hjarðarhagi 24-32 fjölbýlishús málun 1500x1000.jpg";
 import pic2 from "./hjarðarhagi 24-32 málari 1500x1000.jpg";
 import Heading from "../../../components/Heading";
 
-export const Hjarðarhagi24_32 = (props) => {
+export const Hjarðarhagi2432 = (props) => {
   return (
     <>
       <Heading className="text-center" h={props.hLevel}>Hjarðarhagi 24 - 32</Heading>
@@ -36,5 +36,5 @@ export const Hjarðarhagi24_32 = (props) => {
   );
 };
 
-const Hjarðarhagi24_32Page = (props) => <Layout><Hjarðarhagi24_32 /></Layout>;
-export default Hjarðarhagi24_32Page;
+const Hjarðarhagi2432Page = (props) => <Layout><Hjarðarhagi2432 /></Layout>;
+export default Hjarðarhagi2432Page;
