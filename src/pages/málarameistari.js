@@ -4,6 +4,7 @@ import {Col, Row} from "react-bootstrap";
 import Layout from "../components/Layout";
 
 import pic1 from "../images/málarameistari.jpg";
+import certificate from "../images/Jón Hafdal málarameistari skírteini.jpg"
 import Profile1_Jon from "../images/profile1_jon.jpg";
 import Profile2_Marteinn from "../images/profile2_marteinn.jpg";
 
@@ -59,6 +60,12 @@ const Málarameistari = () => {
               verkefni erlendis. Hjá fyrirtækinu starfa samtals 10 starfsmenn meðtalið Jóni og
               Marteini.
             </p>
+
+            <img
+              src={certificate}
+              className="img-fluid my-3"
+              alt="Jón Hafdal málarameistari skírteini"
+            />
           </Col>
         </Row>
 
