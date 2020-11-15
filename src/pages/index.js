@@ -1,6 +1,9 @@
 import React from "react";
 
 import { LayoutNoContainer } from "../components/Layout";
+import { MálarameistariTextDescription } from "./málarameistari";
+import ProjectForm from "../components/ProjectForm";
+
 import s from "./index.module.css";
 
 import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
@@ -15,7 +18,6 @@ import Blikahofdi1 from "./../images/blikahofdi1.jpg";
 import Vegghamrar1 from "./../images/vegghamrar2-10/vegghamrar1.jpg";
 import Profile1_Jon from "./../images/profile1_jon.jpg";
 import Profile2_Marteinn from "./../images/profile2_marteinn.jpg";
-import { MálarameistariTextDescription } from "./málarameistari";
 
 /** Convenience function to return a React style object with a background image */
 const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
@@ -40,6 +42,10 @@ const FeatureIcon = ({label, iconName}) => {
 const Index = (props) => {
   return (
     <LayoutNoContainer isFrontpage={true}>
+      <section>
+        <ProjectForm />
+      </section>
+
       {/* Picture of Jón and Marteinn standing next to each other */}
       <section className="jonogmarteinn-standing">
         <div className="container">
