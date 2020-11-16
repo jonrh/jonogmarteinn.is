@@ -6,14 +6,6 @@ import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
 import Heading from "../../components/Heading";
 
-import Solvangur1 from "./../../images/solvangur/solvangur1.jpg";
-import Solvangur2 from "./../../images/solvangur/solvangur2.jpg";
-import Solvangur3 from "./../../images/solvangur/solvangur3.jpg";
-import Solvangur4 from "./../../images/solvangur/solvangur4.jpg";
-import Solvangur5 from "./../../images/solvangur/solvangur5.jpg";
-import Solvangur6 from "./../../images/solvangur/solvangur6.jpg";
-import Solvangur7 from "./../../images/solvangur/solvangur7.jpg";
-
 export const Sólvangur = (props) => {
   return (
     <>
@@ -29,35 +21,35 @@ export const Sólvangur = (props) => {
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Solvangur1} />
+          <FullWidthImage src="/img/solvangur/solvangur1.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Solvangur2} />
+          <FullWidthImage src="/img/solvangur/solvangur2.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Solvangur3} />
+          <FullWidthImage src="/img/solvangur/solvangur3.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Solvangur4} />
+          <FullWidthImage src="/img/solvangur/solvangur4.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Solvangur5} />
+          <FullWidthImage src="/img/solvangur/solvangur5.jpg" />
         </Col>
       </Row>
       <Row>
         <Col sm={6} xs={12}>
-          <FullWidthImage src={Solvangur7} />
+          <FullWidthImage src="/img/solvangur/solvangur7.jpg" />
         </Col>
         <Col sm={6} xs={12}>
-          <FullWidthImage src={Solvangur6} />
+          <FullWidthImage src="/img/solvangur/solvangur6.jpg" />
         </Col>
       </Row>
     </>

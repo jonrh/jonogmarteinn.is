@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 const ListLinkSeperator = () => <li className="list-inline-item">&sdot;</li>;
 const ListLink = ({label, href}) => {
   return (
     <li className="list-inline-item my-2">
-      <a href={href} className="p-1">{label}</a>
+      <Link href={href} className="p-1">{label}</Link>
     </li>
   );
 }

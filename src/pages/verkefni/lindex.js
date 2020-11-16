@@ -6,8 +6,6 @@ import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
 import Heading from "../../components/Heading";
 
-import LindexPic1 from "./../../images/lindex.jpg";
-
 export const Lindex = (props) => {
   return (
     <>
@@ -24,7 +22,7 @@ export const Lindex = (props) => {
 
       <Row>
         <Col>
-          <FullWidthImage src={LindexPic1} />
+          <FullWidthImage src="/img/lindex.jpg" />
         </Col>
       </Row>
     </>

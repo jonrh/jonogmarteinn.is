@@ -4,9 +4,6 @@ import Col from "react-bootstrap/Col";
 
 import Layout from "../../../components/Layout";
 import FullWidthImage from "../../../components/FullWidthImage";
-
-import pic1 from "./hjarðarhagi 24-32 fjölbýlishús málun 1500x1000.jpg";
-import pic2 from "./hjarðarhagi 24-32 málari 1500x1000.jpg";
 import Heading from "../../../components/Heading";
 
 export const Hjarðarhagi2432 = (props) => {
@@ -24,12 +21,12 @@ export const Hjarðarhagi2432 = (props) => {
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={pic2} />
+          <FullWidthImage src="/verkefni/hjarðarhagi24-32/hjarðarhagi 24-32 fjölbýlishús málun 1500x1000.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={pic1} />
+          <FullWidthImage src="/verkefni/hjarðarhagi24-32/hjarðarhagi 24-32 málari 1500x1000.jpg" />
         </Col>
       </Row>
     </>

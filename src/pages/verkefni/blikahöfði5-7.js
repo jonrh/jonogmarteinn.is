@@ -4,7 +4,6 @@ import {Row, Col} from "react-bootstrap";
 import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
 
-import BlikahöfðiPic1 from "./../../images/blikahofdi1.jpg";
 import Heading from "../../components/Heading";
 
 export const Blikahöfði = (props) => {
@@ -21,7 +20,7 @@ export const Blikahöfði = (props) => {
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={BlikahöfðiPic1} />
+          <FullWidthImage src="/img/blikahofdi1.jpg" />
         </Col>
       </Row>
     </>

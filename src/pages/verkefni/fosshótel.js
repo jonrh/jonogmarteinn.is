@@ -6,13 +6,6 @@ import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
 import Heading from "../../components/Heading";
 
-import Fosshotel1 from "./../../images/fosshotel/fosshotel1.jpg";
-import Fosshotel2 from "./../../images/fosshotel/fosshotel2.jpg";
-import Fosshotel3 from "./../../images/fosshotel/fosshotel3.jpg";
-import Fosshotel4 from "./../../images/fosshotel/fosshotel4.jpg";
-import Fosshotel5 from "./../../images/fosshotel/fosshotel5.jpg";
-import Fosshotel6 from "./../../images/fosshotel/fosshotel6.jpg";
-
 export const Fosshótel = (props) => {
   return (
     <>
@@ -25,30 +18,30 @@ export const Fosshótel = (props) => {
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Fosshotel3} />
+          <FullWidthImage src="/img/fosshotel/fosshotel3.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Fosshotel6} />
+          <FullWidthImage src="/img/fosshotel/fosshotel6.jpg" />
         </Col>
       </Row>
       <Row>
         <Col >
-          <FullWidthImage src={Fosshotel5} />
+          <FullWidthImage src="/img/fosshotel/fosshotel5.jpg" />
         </Col>
         <Col sm={6} xs={12}>
-          <FullWidthImage src={Fosshotel2} />
+          <FullWidthImage src="/img/fosshotel/fosshotel2.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Fosshotel1} />
+          <FullWidthImage src="/img/fosshotel/fosshotel1.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={Fosshotel4} />
+          <FullWidthImage src="/img/fosshotel/fosshotel4.jpg" />
         </Col>
       </Row>
     </>

@@ -3,18 +3,6 @@ import React from "react";
 import { LayoutNoContainer } from "../components/Layout";
 import s from "./index.module.css";
 
-import JonAndMarteinnStanding from "./../images/jonogmarteinn-standing.png";
-import Ibudarhus1_920x912 from "./../images/ibudarhus1-920x912.jpg";
-import Fjolbylishus1 from "./verkefni/vefarastræti/vefarastraeti_fjolbylishus_nymalun_1.jpg";
-import Atvinnu1 from "./../images/atvinnu1.jpg";
-import Serverkefni1_804x820 from "./../images/serverkefni1-804x820.jpg";
-import Fosshotel3 from "./../images/fosshotel/fosshotel3.jpg";
-import Lindex from "./../images/lindex.jpg";
-import Solvangur1 from "./../images/solvangur/solvangur1.jpg";
-import Blikahofdi1 from "./../images/blikahofdi1.jpg";
-import Vegghamrar1 from "./../images/vegghamrar2-10/vegghamrar1.jpg";
-import Profile1_Jon from "./../images/profile1_jon.jpg";
-import Profile2_Marteinn from "./../images/profile2_marteinn.jpg";
 import { MálarameistariTextDescription } from "./málarameistari";
 
 /** Convenience function to return a React style object with a background image */
@@ -46,8 +34,7 @@ const Index = (props) => {
           <div className="row">
             <div className="col-12 text-center">
               <img
-                className="img-fluid"
-                src={JonAndMarteinnStanding}
+                src="/img/jonogmarteinn-standing.png"
                 alt="Jón og Marteinn standandi hlið við hlið"
               />
             </div>
@@ -80,7 +67,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 order-lg-2 text-white showcase-img"
-                style={ backgroundImage(Ibudarhus1_920x912) }
+                style={ backgroundImage("/img/ibudarhus1-920x912.jpg") }
                 role="img" aria-label="Hvítt íbúðarhúsnæði með gráblátt þak"
               />
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -95,7 +82,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 text-white showcase-img"
-                style={ backgroundImage(Fjolbylishus1) }
+                style={ backgroundImage("/verkefni/vefarastræti/vefarastraeti_fjolbylishus_nymalun_1.jpg") }
                 role="img" aria-label="Nýmálað hvítt fjölbýlishús"
               />
               <div className="col-lg-6 my-auto showcase-text">
@@ -111,7 +98,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 order-lg-2 text-white showcase-img"
-                style={ backgroundImage(Atvinnu1) }
+                style={ backgroundImage("/img/atvinnu1.jpg") }
                 role="img" aria-label="Hvítt atvinnuhúsnæði"
               />
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -126,7 +113,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 text-white showcase-img"
-                style={ backgroundImage(Serverkefni1_804x820) }
+                style={ backgroundImage("/img/serverkefni1-804x820.jpg") }
                 role="img" aria-label="Appelsínugult handriði í stigagangi með grábláum vegg"
               />
               <div className="col-lg-6 my-auto showcase-text">
@@ -154,7 +141,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 order-lg-2 text-white showcase-img"
-                style={ backgroundImage(Fosshotel3) }
+                style={ backgroundImage("/img/fosshotel/fosshotel3.jpg") }
                 role="img" aria-label="Mynd tekin fyrir framan Fosshótel á Hnappavöllum"
               />
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -170,7 +157,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 text-white showcase-img"
-                style={ backgroundImage(Lindex) }
+                style={ backgroundImage("/img/lindex.jpg") }
                 role="img" aria-label="Jón Hafdal að kítta við andyri Lindex verslunar í Kaupmannahöfn"
               />
               <div className="col-lg-6 my-auto showcase-text">
@@ -186,7 +173,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 order-lg-2 text-white showcase-img"
-                style={ backgroundImage(Solvangur1) }
+                style={ backgroundImage("/img/solvangur/solvangur1.jpg") }
                 role="img" aria-label="Sameiginlegt rými með hvítum veggjum"
               />
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -202,7 +189,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 text-white showcase-img"
-                style={ backgroundImage(Blikahofdi1) }
+                style={ backgroundImage("/img/blikahofdi1.jpg") }
                 role="img" aria-label="Dökk og ljósgræn málað fjölbýlishús á þremur hæðum"
               />
               <div className="col-lg-6 my-auto showcase-text">
@@ -217,7 +204,7 @@ const Index = (props) => {
             <div className="row no-gutters">
               <div
                 className="col-lg-6 order-lg-2 text-white showcase-img"
-                style={ backgroundImage(Vegghamrar1) }
+                style={ backgroundImage("/img/vegghamrar2-10/vegghamrar1.jpg") }
                 role="img" aria-label="Ljós-ljós brúnt málað fjölbýlishús á tvemur hæðum"
               />
               <div className="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -244,7 +231,11 @@ const Index = (props) => {
           <div className="row justify-content-center">
             <div className="col-lg-4">
               <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img className="img-fluid rounded-circle mb-3" src={Profile1_Jon} alt="Portrait of Jón Hafdal" />
+                <img
+                  src="/img/profile1_jon.jpg"
+                  alt="Portrait of Jón Hafdal"
+                  className="img-fluid rounded-circle mb-3"
+                />
                 <h5>Jón Hafdal Sigurðarson</h5>
                 <p className="font-weight-bold mb-0 h3">
                   <a href="tel:+3547701532">
@@ -256,7 +247,11 @@ const Index = (props) => {
             </div>
             <div className="col-lg-4">
               <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img className="img-fluid rounded-circle mb-3" src={Profile2_Marteinn} alt="Portrait of Marteinn" />
+                <img
+                  src="/img/profile2_marteinn.jpg"
+                  alt="Portrait of Marteinn"
+                  className="img-fluid rounded-circle mb-3"
+                />
                 <h5>Marteinn Hilmarsson</h5>
                 <p className="font-weight-bold mb-0 h3">
                   <a href="tel:+3548611242">

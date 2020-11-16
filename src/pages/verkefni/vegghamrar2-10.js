@@ -6,8 +6,6 @@ import Layout from "../../components/Layout";
 import FullWidthImage from "../../components/FullWidthImage";
 import Heading from "../../components/Heading";
 
-import VegghamrarPic1 from "./../../images/vegghamrar2-10/vegghamrar1.jpg";
-
 export const Vegghamrar = (props) => {
   return (
     <>
@@ -22,7 +20,7 @@ export const Vegghamrar = (props) => {
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={VegghamrarPic1} />
+          <FullWidthImage src="/img/vegghamrar2-10/vegghamrar1.jpg" />
         </Col>
       </Row>
     </>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {Col, Row} from "react-bootstrap";
 
 import Layout from "../../components/Layout";
@@ -35,13 +36,13 @@ const Verkefni = (props) => {
       <Row>
         <Col lg={8} md={10} sm={11} xs={11} className="text-center mx-auto">
           <p>
-            <a href="/verkefni/hjarðarhagi24-32">Hjarðarhagi 24 - 32</a> <br />
-            <a href="/verkefni/vefarastræti">Vefarastræti</a> <br />
-            <a href="/verkefni/fosshótel">Fosshótel</a> <br />
-            <a href="/verkefni/lindex">Lindex</a> <br />
-            <a href="/verkefni/sólvangur">Sólvangur Hjúkrunarheimili</a> <br />
-            <a href="/verkefni/blikahöfði5-7">Blikahöfði 5 - 7</a> <br />
-            <a href="/verkefni/vegghamrar2-10">Vegghamrar 2 - 10</a> <br />
+            <Link href="/verkefni/hjarðarhagi24-32">Hjarðarhagi 24 - 32</Link> <br />
+            <Link href="/verkefni/vefarastræti">Vefarastræti</Link> <br />
+            <Link href="/verkefni/fosshótel">Fosshótel</Link> <br />
+            <Link href="/verkefni/lindex">Lindex</Link> <br />
+            <Link href="/verkefni/sólvangur">Sólvangur Hjúkrunarheimili</Link> <br />
+            <Link href="/verkefni/blikahöfði5-7">Blikahöfði 5 - 7</Link> <br />
+            <Link href="/verkefni/vegghamrar2-10">Vegghamrar 2 - 10</Link> <br />
           </p>
         </Col>
       </Row>

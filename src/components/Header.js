@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
 import NavigationLinks from "./NavigationLinks";
-import simplifiedLogo from "../images/logo/simplified logo v1.svg";
 
 /** Use <h1> when on the frontpage for better SEO */
 const FrontPageHeading = (props) => (
@@ -32,7 +31,7 @@ const Header = (props) => {
           <Col xl={1} lg={2} md={2} xs={3}>
             <a href="/" aria-label="Forsíða">
               <Image
-                src={simplifiedLogo}
+                src="/img/logo/simplified logo v1.svg"
                 alt="Jón & Marteinn logo, red house facade with windows"
               />
             </a>

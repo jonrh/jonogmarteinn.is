@@ -21,7 +21,7 @@ h6 {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../images/splash-bg-1670x839.jpg") no-repeat center center;
+  background: url("/img/splash-bg-1670x839.jpg") no-repeat center center;
   background-size: cover;
   background-position: center;
   padding-top: 8rem;
@@ -126,7 +126,7 @@ header.masthead h2 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../images/splash-bg-1670x839.jpg") no-repeat center center;
+  background: url("/img/splash-bg-1670x839.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;

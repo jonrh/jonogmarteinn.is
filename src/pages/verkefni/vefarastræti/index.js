@@ -4,10 +4,6 @@ import Col from "react-bootstrap/Col";
 
 import Layout from "../../../components/Layout";
 import FullWidthImage from "../../../components/FullWidthImage";
-
-import pic1 from "./vefarastraeti_fjolbylishus_nymalun_1.jpg";
-import pic2 from "./vefarastraeti_fjolbylishus_nymalun_2.jpg";
-import pic3 from "./vefarastraeti_fjolbylishus_nymalun_3.jpg";
 import Heading from "../../../components/Heading";
 
 export const Vefarastræti = (props) => {
@@ -24,17 +20,17 @@ export const Vefarastræti = (props) => {
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={pic1} />
+          <FullWidthImage src="/verkefni/vefarastræti/vefarastraeti_fjolbylishus_nymalun_1.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={pic2} />
+          <FullWidthImage src="/verkefni/vefarastræti/vefarastraeti_fjolbylishus_nymalun_2.jpg" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <FullWidthImage src={pic3} />
+          <FullWidthImage src="/verkefni/vefarastræti/vefarastraeti_fjolbylishus_nymalun_3.jpg" />
         </Col>
       </Row>
     </>

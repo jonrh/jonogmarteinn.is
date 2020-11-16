@@ -1,14 +1,9 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 import Container from "react-bootstrap/Container";
 
 import Header from "./Header";
 import Footer from "./Footer";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import "simple-line-icons/css/simple-line-icons.css";
-import "./../styles/landing-page.css";
-import "./../styles/jonogmarteinn.css";
 
 /** Default HTML <head> tags that can then be overwritten on each page that uses Layout */
 const DefaultHtmlHead = (props) => {
@@ -17,7 +12,7 @@ const DefaultHtmlHead = (props) => {
     "770 1532, Marteinn Hilmarsson: 861 1242. jonogmarteinn@jonogmarteinn.is";
 
   return (
-    <Helmet>
+    <Head>
       <html lang="is" />
       <meta name="description" content={metaDescription} />
       <meta name="author" content="Jón Rúnar Helgason, jonrh.is" />
@@ -31,7 +26,7 @@ const DefaultHtmlHead = (props) => {
       <meta name="theme-color" content="#cf1717" />
 
       <title>Jón og Marteinn Málningarþjónusta</title>
-    </Helmet>
+    </Head>
   );
 };
 
