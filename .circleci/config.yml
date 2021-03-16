@@ -75,7 +75,7 @@ jobs:
           name: Install AWS command line interface v1
           command: |
             sudo apt-get install python-dev
-            curl -O https://bootstrap.pypa.io/get-pip.py
+            curl -O https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
             python get-pip.py --user
             export PATH=~/.local/bin:$PATH
             pip install awscli --upgrade --user
