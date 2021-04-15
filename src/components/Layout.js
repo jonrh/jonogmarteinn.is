@@ -13,7 +13,6 @@ const DefaultHtmlHead = (props) => {
 
   return (
     <Head>
-      <html lang="is" />
       <meta name="description" content={metaDescription} />
       <meta name="author" content="Jón Rúnar Helgason, jonrh.is" />
 
