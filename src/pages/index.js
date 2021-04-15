@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { LayoutNoContainer } from "../components/Layout";
 import s from "./index.module.css";
@@ -33,9 +34,11 @@ const Index = (props) => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <img
+              <Image
                 src="/img/jonogmarteinn-standing.png"
                 alt="Jón og Marteinn standandi hlið við hlið"
+                width={825} height={1230} quality={100}
+                priority={true}
               />
             </div>
           </div>
