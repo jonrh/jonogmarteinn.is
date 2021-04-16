@@ -13,17 +13,19 @@
 // do not intend to reveal yet so it's better to be silent on them.
 //
 // See: https://github.com/iamvishnusankar/next-sitemap
-const siteUrl = process.env.VERCEL_URL ? process.env.VERCEL_URL : "https://jonogmarteinn.is";
 const isProduction = process.env.VERCEL_ENV === "production";
 const excludeAllRoutes = ["*"]; // Excluding with a "*" prevents the creation of sitemap.xml
 const allowCrawlingOnAllRoutes = "";
 const preventCrawlingOnAllRoutes = "/";
+const siteUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "https://jonogmarteinn.is";
 
 // Work in progress routes if any we don't want search engines to know about
 const routesToHideInProduction = ["/málari", "/málningarþjónusta*"];
 
 module.exports = {
-  siteUrl: siteUrl,
+  siteUrl: isProduction ? "https://jonogmarteinn.is": siteUrl,
   exclude: isProduction ? routesToHideInProduction : excludeAllRoutes,
 
   generateRobotsTxt: true,
