@@ -19,9 +19,13 @@
     "simple-line-icons": "2.5.5",
     "startbootstrap-landing-page": "5.0.8"
   },
+  "devDependencies": {
+    "next-sitemap": "1.6.25"
+  },
   "scripts": {
     "dev": "next dev",
+    "start": "next start",
     "build": "next build",
-    "start": "next start"
+    "postbuild": "next-sitemap"
   }
 }
