@@ -1,3 +1,6 @@
+# Local environment variables, could contain secrets
+.env.local
+
 # JetBrains IDEs, WebStorm for example
 .idea/
 
