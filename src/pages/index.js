@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { Container, Row, Col } from "react-bootstrap";
 
 import { LayoutNoContainer } from "../components/Layout";
-import s from "./index.module.css";
-
 import { MálarameistariTextDescription } from "./málarameistari";
+import ProjectRequest from "../components/ProjectRequest";
+
+import s from "./index.module.css";
 
 /** Convenience function to return a React style object with a background image */
 const backgroundImage = (image) => ({ backgroundImage: `url('${image}')` });
@@ -29,6 +31,13 @@ const FeatureIcon = ({label, iconName}) => {
 const Index = (props) => {
   return (
     <LayoutNoContainer isFrontpage={true}>
+      <section>
+        <div className="container">
+          <h2 className="text-center">Verkbeiðni</h2>
+          <ProjectRequest />
+        </div>
+      </section>
+
       {/* Picture of Jón and Marteinn standing next to each other */}
       <section className="jonogmarteinn-standing">
         <div className="container">
@@ -283,6 +292,18 @@ const Index = (props) => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="py-5">
+        <Container>
+          <h1 className="text-center">Verkbeiðni</h1>
+
+          <Row>
+            <Col className="col-11 col-md-10 col-lg-8 mx-auto">
+              <ProjectRequest />
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       {/* LightWidget, displays Instagram photos. Account & settings: lightwidget.com */}

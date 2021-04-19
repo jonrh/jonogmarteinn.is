@@ -22,6 +22,8 @@ const NavigationLinks = () => {
         <ListLink label="Verkefni" href="/verkefni" />
         <ListLinkSeperator />
         <ListLink label="Málarameistari" href="/málarameistari" />
+        <ListLinkSeperator />
+        <ListLink label="Verkbeiðni" href="/verkbeidni" />
       </ul>
     </nav>
   );
