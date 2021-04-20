@@ -22,7 +22,7 @@ const FeatureIcon = ({label, iconName}) => {
         <div className="features-icons-icon d-flex">
           <i className={iconClassName} />
         </div>
-        <h3>{label}</h3>
+        <h2 className="h3">{label}</h2>
       </div>
     </div>
   );
@@ -31,13 +31,6 @@ const FeatureIcon = ({label, iconName}) => {
 const Index = (props) => {
   return (
     <LayoutNoContainer isFrontpage={true}>
-      <section>
-        <div className="container">
-          <h2 className="text-center">Verkbeiðni</h2>
-          <ProjectRequest />
-        </div>
-      </section>
-
       {/* Picture of Jón and Marteinn standing next to each other */}
       <section className="jonogmarteinn-standing">
         <div className="container">
@@ -296,7 +289,7 @@ const Index = (props) => {
 
       <section className="py-5">
         <Container>
-          <h1 className="text-center">Verkbeiðni</h1>
+          <h2 id="verkbeidni" className="h1 text-center">Verkbeiðni</h2>
 
           <Row>
             <Col className="col-11 col-md-10 col-lg-8 mx-auto">

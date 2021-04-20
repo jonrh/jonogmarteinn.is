@@ -1,38 +1,41 @@
 import React, { useState } from "react";
-import { Container, Form, Button, Alert } from "react-bootstrap"
+import { Form, Button, Card } from "react-bootstrap"
+import LoadingSpinner from "./LoadingSpinner";
 
 const SubmissionSuccess = (props) => {
   return (
-    <Alert variant="success" className="my-5">
-      <p className="text-center">
-        Verkbeiðni móttekin <span role="img" aria-label="confetti celebration">🎉</span>
-      </p>
+    <Card className="my-5">
+      <Card.Body>
+        <Card.Title className="text-center">
+          Mótekið <span role="img" aria-label="confetti celebration">🎉</span>
+        </Card.Title>
 
-      <p className="my-3">
-        <strong>Nafn</strong>: {props.name} <br />
-        <strong>Sími</strong>: {props.phone} <br />
-        <strong>Póstur</strong>: {props.email} <br />
-        <strong>Lýsing</strong>: {props.description}
-      </p>
+        <p>
+          Við höfum samband eins fljótt og við getum. Eftir það mælum við okkur mót fyrir
+          vettfangsskoðun og gefum því næst frítt tilboð í verkið. Ef staðfestingar tölvupóstur
+          barst ekki væri öruggast að senda beiðnina beint á{" "}
+          <a href="mailto:jonogmarteinn@jonogmarteinn.is?Subject=Verkbeiðni">
+            jonogmarteinn@jonogmarteinn.is
+          </a>.
+        </p>
 
-      <hr />
+        <hr />
 
-      <p>
-        Næstu skref eru að við munum hafa samband eins fljótt og við getum. Eftir það mælum við
-        okkur mót fyrir vettfangsskoðun og gefum því næst frítt tilboð í verkið.
-      </p>
+        <p className="my-3">
+          <strong>Nafn</strong>: {props.name} <br />
+          <strong>Sími</strong>: {props.phone} <br />
+          <strong>Póstur</strong>: {props.email} <br />
+          <strong>Lýsing</strong>: {props.description}
+        </p>
 
-      <p>
-        Ef staðfestingar tölvupóstur barst ekki væri öruggast að senda beiðnina beint á{" "}
-        <a href="mailto:jonogmarteinn@jonogmarteinn.is?Subject=Verkbeiðni">
-          jonogmarteinn@jonogmarteinn.is
-        </a>.
-      </p>
-    </Alert>
+      </Card.Body>
+    </Card>
   );
 };
 
 const ProjectForm = (props) => {
+  const {setName, setPhone, setEmail, setDescription, onSubmit, isLoading} = props;
+
   return (
     <Form className="my-5">
       <Form.Group controlId="projectForm.Name">
@@ -40,7 +43,8 @@ const ProjectForm = (props) => {
         <Form.Control
           type="text"
           size="lg"
-          onChange={event => props.setName(event.target.value)}
+          disabled={isLoading}
+          onChange={event => setName(event.target.value)}
           placeholder="Nafn einstaklings, fyrirtækis eða stofnunnar"
         />
       </Form.Group>
@@ -50,7 +54,8 @@ const ProjectForm = (props) => {
         <Form.Control
           type="text"
           size="lg"
-          onChange={event => props.setPhone(event.target.value)}
+          disabled={isLoading}
+          onChange={event => setPhone(event.target.value)}
           placeholder="Símanúmer svo við getum spjallað"
         />
       </Form.Group>
@@ -60,7 +65,8 @@ const ProjectForm = (props) => {
         <Form.Control
           type="text"
           size="lg"
-          onChange={event => props.setEmail(event.target.value)}
+          disabled={isLoading}
+          onChange={event => setEmail(event.target.value)}
           placeholder="Netfang svo við getum haft samband"
         />
         <Form.Text className="text-muted">
@@ -74,7 +80,8 @@ const ProjectForm = (props) => {
           as="textarea"
           size="lg"
           rows="2"
-          onChange={event => props.setDescription(event.target.value)}
+          disabled={isLoading}
+          onChange={event => setDescription(event.target.value)}
           placeholder="Lýsing á verki, staðsetning og verktími"
         />
         <Form.Text className="text-muted">
@@ -83,13 +90,12 @@ const ProjectForm = (props) => {
         </Form.Text>
       </Form.Group>
 
-      <Button
-        variant="project-request" size="lg"
-        block={true} type="submit"
-        onClick={props.onSubmit}
-      >
-        Senda verkbeiðni
-      </Button>
+      {isLoading
+        ? <LoadingSpinner />
+        : <Button variant="project-request" size="lg" block={true} type="submit" onClick={onSubmit}>
+          Senda verkbeiðni
+        </Button>
+      }
     </Form>
   );
 };
@@ -107,22 +113,28 @@ const ProjectRequest = (props) => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch("api/projectrequest", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        phone: phone,
-        email: email,
-        description: description,
-      }),
-    });
+    setLoading(true);
 
-    console.log("State:");
-    console.log("Name: "+ name);
-    console.log("Phone: "+ phone);
-    console.log("Email: "+ email);
-    console.log("Description: "+ description);
+    // Debug function to simulate API response time
+    setTimeout(() => {
+      setLoading(false);
+      setSent(true);
+
+      if (document.querySelector("#verkbeidni")) {
+        document.querySelector("#verkbeidni").scrollIntoView({ behavior: "smooth" });
+      }
+    }, 2000);
+
+    // const response = await fetch("api/projectrequest", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({
+    //     name: name,
+    //     phone: phone,
+    //     email: email,
+    //     description: description,
+    //   }),
+    // });
   };
 
   const submissionSuccess =
@@ -140,6 +152,7 @@ const ProjectRequest = (props) => {
       setEmail={setEmail}
       setDescription={setDescription}
       onSubmit={onSubmit}
+      isLoading={isLoading}
     />;
 
   return isSent ? submissionSuccess : projectForm;

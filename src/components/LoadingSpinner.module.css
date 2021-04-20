@@ -1,0 +1,21 @@
+/* Vertically and horizontally center the spinner */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SpinKit plane spinner. Source: https://github.com/tobiasahlin/SpinKit */
+.skPlane {
+    width: 4.4em;
+    height: 4.4em;
+    background-color: #313131;
+    animation: skPlane 1.2s infinite ease-in-out;
+}
+
+/* SpinKit plane spinner animation */
+@keyframes skPlane {
+    0% { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+    100% { transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); }
+}

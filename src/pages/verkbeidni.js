@@ -6,7 +6,7 @@ import ProjectRequest from "../components/ProjectRequest";
 const Verkbeidni = () => {
   return (
     <Layout>
-      <h1 className="text-center">Verkbeiðni</h1>
+      <h1 id="verkbeidni" className="text-center">Verkbeiðni</h1>
       <ProjectRequest />
     </Layout>
   );
