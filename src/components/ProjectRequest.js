@@ -7,13 +7,13 @@ const SubmissionSuccess = (props) => {
     <Card className="my-5">
       <Card.Body>
         <Card.Title className="text-center">
-          Mótekið <span role="img" aria-label="confetti celebration">🎉</span>
+          Móttekið <span role="img" aria-label="confetti celebration">🎉</span>
         </Card.Title>
 
-        <p>
-          Við höfum samband eins fljótt og við getum. Eftir það mælum við okkur mót fyrir
-          vettfangsskoðun og gefum því næst frítt tilboð í verkið. Ef staðfestingar tölvupóstur
-          barst ekki væri öruggast að senda beiðnina beint á{" "}
+        <p className="text-justify">
+          Við höfum samband eins fljótt og við getum, mælum okkur mót fyrir vettfangsskoðun og
+          gefum þér frítt tilboð í verkið. Ef staðfestingar tölvupóstur barst ekki væri öruggast að
+          senda beiðnina beint á{" "}
           <a href="mailto:jonogmarteinn@jonogmarteinn.is?Subject=Verkbeiðni">
             jonogmarteinn@jonogmarteinn.is
           </a>.
@@ -109,6 +109,21 @@ const ProjectRequest = (props) => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
+  const { setShowIntro=(noop) => {} } = props;
+
+  /**
+   * After the form has been submitted, scroll so the heading and the results are in view.
+   *
+   * Note: This is not an ideal solution. It's annoying to get the scrolled position changed when
+   * the form and confirmation modal were already in view and therefore no need to change the
+   * position. This function could therefore potentially be refined to take into account if a
+   * scroll is needed or not. Then skip scrolling if it's not needed.
+   */
+  const scrollToHeading = () => {
+      if (document.querySelector("#verkbeidni")) {
+        document.querySelector("#verkbeidni").scrollIntoView({ behavior: "smooth" });
+      }
+  }
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -116,25 +131,32 @@ const ProjectRequest = (props) => {
     setLoading(true);
 
     // Debug function to simulate API response time
-    setTimeout(() => {
-      setLoading(false);
-      setSent(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   setSent(true);
+    //   setShowIntro(false);
+    //
+    //   if (document.querySelector("#verkbeidni")) {
+    //     document.querySelector("#verkbeidni").scrollIntoView({ behavior: "smooth" });
+    //   }
+    // }, 2000);
 
-      if (document.querySelector("#verkbeidni")) {
-        document.querySelector("#verkbeidni").scrollIntoView({ behavior: "smooth" });
-      }
-    }, 2000);
+    const response = await fetch("api/projectrequest", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        email: email,
+        description: description,
+      }),
+    });
 
-    // const response = await fetch("api/projectrequest", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({
-    //     name: name,
-    //     phone: phone,
-    //     email: email,
-    //     description: description,
-    //   }),
-    // });
+    setLoading(false);
+    setSent(true);
+    setShowIntro(false);
+    scrollToHeading();
+
   };
 
   const submissionSuccess =

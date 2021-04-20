@@ -43,16 +43,16 @@ Lýsing: ${req.body.description || ""}
     },
   };
 
-  // res.status(200).json({ text: "Email sent", msg: emailTextBody }); // Debug
+  res.status(200).json({ text: "Email sent", msg: emailTextBody }); // Debug
   // res.status(500).json({ text: `Error: kek` }) // Debug
 
-  sgMail
-    .send(msg)
-    .then(() => {
-      console.log("Email sent")
-      res.status(200).json({ text: "Email sent" })
-    })
-    .catch((error) => {
-      res.status(500).json({ text: `Error: ${error}` })
-    });
+  // sgMail
+  //   .send(msg)
+  //   .then(() => {
+  //     console.log("Email sent")
+  //     res.status(200).json({ text: "Email sent" })
+  //   })
+  //   .catch((error) => {
+  //     res.status(500).json({ text: `Error: ${error}` })
+  //   });
 };
