@@ -27,3 +27,24 @@ a:hover {
 .features-icons .features-icons-item:hover .features-icons-icon i {
     font-size: 4.5rem;
 }
+
+/* Custom extra large button for submitting the project proposal form */
+.btn-project-request {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+
+    color: white;
+    background-color: #cf1717;
+    border-color: #cf1717;
+
+    border-radius: 0;
+}
+
+.btn-project-request:hover {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+
+    color: white;
+    background-color: #820e0e;
+    border-color: #cf1717;
+}

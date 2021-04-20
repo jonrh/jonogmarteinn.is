@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-const ListLinkSeperator = () => <li className="list-inline-item">&sdot;</li>;
-const ListLink = ({label, href}) => {
+const ListLink = ({label, href, skipSeparator=false}) => {
   return (
-    <li className="list-inline-item my-2">
+    <li className="list-inline-item my-2 mx-0">
       <Link href={href} className="p-1">{label}</Link>
+      { skipSeparator ? null : <span className="mx-2">&sdot;</span>}
     </li>
   );
 }
@@ -16,16 +16,13 @@ const NavigationLinks = () => {
     <nav>
       <ul className="list-inline">
         <ListLink label="Forsíða" href="/" />
-        <ListLinkSeperator />
         {/*<ListLink label="Málningarþjónusta" href="/málningarþjónusta" />*/}
-        {/*<ListLinkSeperator />*/}
         <ListLink label="Verkefni" href="/verkefni" />
-        <ListLinkSeperator />
         <ListLink label="Málarameistari" href="/málarameistari" />
+        <ListLink label="Verkbeiðni" href="/verkbeidni" skipSeparator={true} />
       </ul>
     </nav>
   );
 };
 
 export default NavigationLinks;
-
