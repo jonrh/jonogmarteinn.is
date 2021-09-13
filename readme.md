@@ -23,7 +23,7 @@ bottom right hand corner. If clicked it would bring up a dialog asking for
 consent. If given the site would then dynamically load the LiveChat widget and 
 bring up the chat window. I would then also add the Privacy and Cookie Policy.
 
-The raw HTML setup code we got sent from Svörum Strax:
+The raw HTML setup code we got sent from Svörum Strax, replace `<LICENCE>`:
 
 ```html
 <!-- Paste the code to your website’s source code before the </body> tag: -->
