@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 
 import Header from "./Header";
 import Footer from "./Footer";
+import LiveChat from "./LiveChat";
 
 /** Default HTML <head> tags that can then be overwritten on each page that uses Layout */
 const DefaultHtmlHead = (props) => {
@@ -34,6 +35,7 @@ export const LayoutNoContainer = (props) => {
   return (
     <>
       <DefaultHtmlHead />
+      <LiveChat />
       <Header isFrontpage={props.isFrontpage} />
       {props.children}
       <Footer />
