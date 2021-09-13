@@ -4,7 +4,7 @@ import Script from "next/script";
 /** A LiveChat chat widget for Svörum Strax */
 const LiveChat = () => {
   return (
-    <Script>
+    <Script strategy="lazyOnload">
       {`
         window.__lc = window.__lc || {};
         window.__lc.license = 12638850;
